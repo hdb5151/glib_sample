@@ -5,7 +5,7 @@ typedef struct {
     gchar *name;
 } DATA_;
 
-guint main(gint argc, gchar **argv) { //------------------------------------main--------------------
+guint main_ptrArray(gint argc, gchar **argv) { //------------------------------------main--------------------
     //     ptr_array_creat_foreach();
     //     ptr_array_remove();
     ptr_array_find();
