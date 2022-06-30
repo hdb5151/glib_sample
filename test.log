@@ -3,3 +3,13 @@ fatal: unable to access 'https://github.com/hdb5151/glib_sample.git/': gnutls_ha
 git config --global  --unset https.https://github.com.proxy 
 git config --global  --unset http.https://github.com.proxy 
  
+
+git add .
+
+git commit -m "注释"
+
+git push -u origin main
+
+git pull origin main:main
+
+git clone https://ghproxy.com/https://github.com/hdb5151/glib_sample.git
