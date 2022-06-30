@@ -1,3 +1,3 @@
-/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles/rebuild_cache.dir
-/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles/glib.dir
-/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles/edit_cache.dir
+/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles/rebuild_cache.dir
+/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles/glib.dir
+/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles/edit_cache.dir

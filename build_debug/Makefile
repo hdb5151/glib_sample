@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1
+CMAKE_SOURCE_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug
+CMAKE_BINARY_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,33 +122,6 @@ glib: cmake_check_build_system
 glib/fast:
 	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/build
 .PHONY : glib/fast
-
-src/deepstream_test1_app.o: src/deepstream_test1_app.c.o
-
-.PHONY : src/deepstream_test1_app.o
-
-# target to build an object file
-src/deepstream_test1_app.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/deepstream_test1_app.c.o
-.PHONY : src/deepstream_test1_app.c.o
-
-src/deepstream_test1_app.i: src/deepstream_test1_app.c.i
-
-.PHONY : src/deepstream_test1_app.i
-
-# target to preprocess a source file
-src/deepstream_test1_app.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/deepstream_test1_app.c.i
-.PHONY : src/deepstream_test1_app.c.i
-
-src/deepstream_test1_app.s: src/deepstream_test1_app.c.s
-
-.PHONY : src/deepstream_test1_app.s
-
-# target to generate assembly for a file
-src/deepstream_test1_app.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/deepstream_test1_app.c.s
-.PHONY : src/deepstream_test1_app.c.s
 
 src/glib_hook.o: src/glib_hook.c.o
 
@@ -204,6 +177,60 @@ src/glib_key_value.c.s:
 	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_key_value.c.s
 .PHONY : src/glib_key_value.c.s
 
+src/glib_normal_array.o: src/glib_normal_array.c.o
+
+.PHONY : src/glib_normal_array.o
+
+# target to build an object file
+src/glib_normal_array.c.o:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_normal_array.c.o
+.PHONY : src/glib_normal_array.c.o
+
+src/glib_normal_array.i: src/glib_normal_array.c.i
+
+.PHONY : src/glib_normal_array.i
+
+# target to preprocess a source file
+src/glib_normal_array.c.i:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_normal_array.c.i
+.PHONY : src/glib_normal_array.c.i
+
+src/glib_normal_array.s: src/glib_normal_array.c.s
+
+.PHONY : src/glib_normal_array.s
+
+# target to generate assembly for a file
+src/glib_normal_array.c.s:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_normal_array.c.s
+.PHONY : src/glib_normal_array.c.s
+
+src/glib_ptr_array.o: src/glib_ptr_array.c.o
+
+.PHONY : src/glib_ptr_array.o
+
+# target to build an object file
+src/glib_ptr_array.c.o:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_ptr_array.c.o
+.PHONY : src/glib_ptr_array.c.o
+
+src/glib_ptr_array.i: src/glib_ptr_array.c.i
+
+.PHONY : src/glib_ptr_array.i
+
+# target to preprocess a source file
+src/glib_ptr_array.c.i:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_ptr_array.c.i
+.PHONY : src/glib_ptr_array.c.i
+
+src/glib_ptr_array.s: src/glib_ptr_array.c.s
+
+.PHONY : src/glib_ptr_array.s
+
+# target to generate assembly for a file
+src/glib_ptr_array.c.s:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_ptr_array.c.s
+.PHONY : src/glib_ptr_array.c.s
+
 src/glib_str.o: src/glib_str.c.o
 
 .PHONY : src/glib_str.o
@@ -230,6 +257,33 @@ src/glib_str.s: src/glib_str.c.s
 src/glib_str.c.s:
 	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_str.c.s
 .PHONY : src/glib_str.c.s
+
+src/glib_test.o: src/glib_test.c.o
+
+.PHONY : src/glib_test.o
+
+# target to build an object file
+src/glib_test.c.o:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test.c.o
+.PHONY : src/glib_test.c.o
+
+src/glib_test.i: src/glib_test.c.i
+
+.PHONY : src/glib_test.i
+
+# target to preprocess a source file
+src/glib_test.c.i:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test.c.i
+.PHONY : src/glib_test.c.i
+
+src/glib_test.s: src/glib_test.c.s
+
+.PHONY : src/glib_test.s
+
+# target to generate assembly for a file
+src/glib_test.c.s:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test.c.s
+.PHONY : src/glib_test.c.s
 
 src/glib_test_tool.o: src/glib_test_tool.c.o
 
@@ -294,18 +348,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... glib"
 	@echo "... edit_cache"
-	@echo "... src/deepstream_test1_app.o"
-	@echo "... src/deepstream_test1_app.i"
-	@echo "... src/deepstream_test1_app.s"
 	@echo "... src/glib_hook.o"
 	@echo "... src/glib_hook.i"
 	@echo "... src/glib_hook.s"
 	@echo "... src/glib_key_value.o"
 	@echo "... src/glib_key_value.i"
 	@echo "... src/glib_key_value.s"
+	@echo "... src/glib_normal_array.o"
+	@echo "... src/glib_normal_array.i"
+	@echo "... src/glib_normal_array.s"
+	@echo "... src/glib_ptr_array.o"
+	@echo "... src/glib_ptr_array.i"
+	@echo "... src/glib_ptr_array.s"
 	@echo "... src/glib_str.o"
 	@echo "... src/glib_str.i"
 	@echo "... src/glib_str.s"
+	@echo "... src/glib_test.o"
+	@echo "... src/glib_test.i"
+	@echo "... src/glib_test.s"
 	@echo "... src/glib_test_tool.o"
 	@echo "... src/glib_test_tool.i"
 	@echo "... src/glib_test_tool.s"

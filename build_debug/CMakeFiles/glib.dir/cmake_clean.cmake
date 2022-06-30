@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/glib.dir/src/deepstream_test1_app.c.o"
   "CMakeFiles/glib.dir/src/glib_hook.c.o"
   "CMakeFiles/glib.dir/src/glib_key_value.c.o"
+  "CMakeFiles/glib.dir/src/glib_normal_array.c.o"
+  "CMakeFiles/glib.dir/src/glib_ptr_array.c.o"
   "CMakeFiles/glib.dir/src/glib_str.c.o"
+  "CMakeFiles/glib.dir/src/glib_test.c.o"
   "CMakeFiles/glib.dir/src/glib_test_tool.c.o"
   "CMakeFiles/glib.dir/src/glib_timer.c.o"
   "glib.pdb"

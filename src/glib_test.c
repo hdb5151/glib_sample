@@ -35,11 +35,15 @@ splitToint strsplit_toint(gchar *str, const gchar *split, guint splitLen, gboole
         // tempsplit.ori_idx = idx;                     //原始序列
         tempsplit.str_num++;
         tempsplit.str[idx] = g_strdup(t_str[idx]);
-        tempsplit.int_[idx].data = g_ascii_strtoull(tempsplit.str[idx], &end_ptr, 10); //字符串转换为 整形
-        if (tempsplit.int_[idx].data) {
+        if (g_ascii_isdigit(tempsplit.str[idx][0])) {
+            tempsplit.int_[idx].data = g_ascii_strtoull(tempsplit.str[idx], &end_ptr, 10); //字符串转换为 整形
             tempsplit.int_num++;
             tempsplit.int_[idx].original_idx = idx;
         }
+        // if (tempsplit.int_[idx].data) {
+        //     tempsplit.int_num++;
+        //     tempsplit.int_[idx].original_idx = idx;
+        // }
         // g_print("the split -- strr[%d] = %d\n", idx, tempsplit.int_[idx]);
     }
     if (tempsplit.str_num != tempsplit.int_num) {
@@ -70,9 +74,9 @@ splitToint strsplit_toint(gchar *str, const gchar *split, guint splitLen, gboole
 }
 
 gchar *stream_type_list = "4,3";
-gchar *gie_id_list = "1:2,3:a:5";
+gchar *gie_id_list = "1:2,3:0:0";
 
-int main_(int argc, char *argv[]) {
+int main_test(int argc, char *argv[]) {
     GMainLoop *loop = NULL;
 
     splitToint spt_stream_type, spt_gie_list, spt_gie_id;
@@ -118,7 +122,8 @@ int main_(int argc, char *argv[]) {
                     jj, spt_gie_id.int_[jj].data, spt_gie_id.str[jj], spt_gie_id.int_num, spt_gie_id.str_num, spt_gie_id.full_to_int, spt_gie_id.is_equals, spt_gie_id.int_[jj].original_idx);
         }
     }
-
+    // g_assert_cmpuint(1, ==, 3);
+    g_assert_false(false);
     if (a == 1)
         goto A;
 A : {

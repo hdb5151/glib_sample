@@ -1,0 +1,30 @@
+{
+      // See https://go.microsoft.com/fwlink/?LinkId=733558
+      // for the documentation about the tasks.json format
+      "version": "2.0.0",
+      "tasks": [
+            {
+                  "label": "build",
+                  "type": "shell",
+                  "command": "${workspaceFolder}/make_build_debug.sh",
+                  // "command": "${workspaceFolder}/make_build.sh",
+                  "group": {
+                        "kind": "build",
+                        "isDefault": true
+                  },
+                  "problemMatcher": [
+                        "$gcc"
+                  ]
+            },
+            {
+                  "label": "clean",
+                  "type": "shell",
+                  "command": "${workspaceFolder}/make_clean.sh",
+                  "args": [],
+                  "group": "build",
+                  "problemMatcher": [
+                        "$gcc"
+                  ]
+            }
+      ]
+}

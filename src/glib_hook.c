@@ -1,11 +1,13 @@
 #include "glib_hook.h"
 
-typedef struct my_data_tag {
+typedef struct my_data_tag
+{
     int id;
     char *name;
 } my_data_t;
 
-int main(int argc, char **argv) {
+int mainz_hook(int argc, char **argv)
+{
     /**
      * @brief Construct a new test glib ghook insert object
      *
@@ -36,15 +38,19 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-static void hook_func(gpointer data) {
+static void hook_func(gpointer data)
+{
     my_data_t *d = (my_data_t *)data;
     g_print("(hook_func)data->id:%d, data->name:%s \n", d->id, d->name);
 }
 
-static void hook_destroy(gpointer data) {
+static void hook_destroy(gpointer data)
+{
     my_data_t *d = (my_data_t *)data;
-    if (NULL != d) {
-        if (NULL != d->name) {
+    if (NULL != d)
+    {
+        if (NULL != d->name)
+        {
             g_print("(hook_destroy) %s \n", d->name);
             g_free(d->name);
         }
@@ -52,7 +58,8 @@ static void hook_destroy(gpointer data) {
     }
 }
 
-static void test_glib_ghook_insert(void) {
+static void test_glib_ghook_insert(void)
+{
     GHookList *hl;
     GHook *hook1, *hook2;
     my_data_t *d1, *d2;
@@ -86,12 +93,14 @@ static void test_glib_ghook_insert(void) {
     g_free(hl);
 }
 
-static void hook_marshaller_func(GHook *hook, gpointer marshal_data) {
+static void hook_marshaller_func(GHook *hook, gpointer marshal_data)
+{
     my_data_t *d = (my_data_t *)hook->data;
     d->id = d->id * GPOINTER_TO_INT(marshal_data);
 }
 
-static void hook1_func(gpointer data) {
+static void hook1_func(gpointer data)
+{
     my_data_t *d = (my_data_t *)data;
     g_print("(hook1)data->id:%d, data->name:%s \n", d->id, d->name);
     d->id = d->id * 10;
@@ -99,32 +108,40 @@ static void hook1_func(gpointer data) {
     d->name = g_strdup_printf("new-name-%d", d->id);
 }
 
-static void hook1_destroy(gpointer data) {
+static void hook1_destroy(gpointer data)
+{
     my_data_t *d = (my_data_t *)data;
-    if (NULL != d) {
-        if (NULL != d->name) {
+    if (NULL != d)
+    {
+        if (NULL != d->name)
+        {
             g_free(d->name);
         }
         g_free(d);
     }
 }
 
-static void hook2_func(gpointer data) {
+static void hook2_func(gpointer data)
+{
     my_data_t *d = (my_data_t *)data;
     g_print("(hook2)data->id:%d, data->name:%s \n", d->id, d->name);
 }
 
-static void hook2_destroy(gpointer data) {
+static void hook2_destroy(gpointer data)
+{
     my_data_t *d = (my_data_t *)data;
-    if (NULL != d) {
-        if (NULL != d->name) {
+    if (NULL != d)
+    {
+        if (NULL != d->name)
+        {
             g_free(d->name);
         }
         g_free(d);
     }
 }
 
-static void test_glib_ghook_exec(void) {
+static void test_glib_ghook_exec(void)
+{
     GHookList *hl;
     GHook *hook1, *hook2;
     my_data_t *d1, *d2;
@@ -172,25 +189,31 @@ static void test_glib_ghook_exec(void) {
     g_free(hl);
 }
 /*--------------------------------*/
-gboolean hook_marshal_func(GHook *hook, gpointer marshal_data) {
+gboolean hook_marshal_func(GHook *hook, gpointer marshal_data)
+{
     my_data_t *d = (my_data_t *)hook->data;
-    if ((d->id / 10) % 2) {
+    if ((d->id / 10) % 2)
+    {
         return FALSE;
     }
 
     return TRUE;
 }
 
-static void hook3_func(gpointer data) {
+static void hook3_func(gpointer data)
+{
     my_data_t *d = (my_data_t *)data;
     g_print("(hook3_func)data->id:%d, data->name:%s \n", d->id, d->name);
     d->id = d->id * 10;
 }
 
-static void hook3_destroy(gpointer data) {
+static void hook3_destroy(gpointer data)
+{
     my_data_t *d = (my_data_t *)data;
-    if (NULL != d) {
-        if (NULL != d->name) {
+    if (NULL != d)
+    {
+        if (NULL != d->name)
+        {
             g_print("(hook3_destroy) id:%d, name:%s \n", d->id, d->name);
             g_free(d->name);
         }
@@ -198,7 +221,8 @@ static void hook3_destroy(gpointer data) {
     }
 }
 
-static void test_glib_ghook_exec_part(void) {
+static void test_glib_ghook_exec_part(void)
+{
     GHookList *hl;
     GHook *hook1, *hook2, *hook3, *hook4;
     my_data_t *d1, *d2, *d3, *d4;

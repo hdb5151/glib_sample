@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1
+CMAKE_SOURCE_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug
+CMAKE_BINARY_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/glib.dir/depend.make
@@ -57,42 +57,18 @@ include CMakeFiles/glib.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/glib.dir/flags.make
 
-CMakeFiles/glib.dir/src/deepstream_test1_app.c.o: CMakeFiles/glib.dir/flags.make
-CMakeFiles/glib.dir/src/deepstream_test1_app.c.o: ../src/deepstream_test1_app.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/glib.dir/src/deepstream_test1_app.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/deepstream_test1_app.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/deepstream_test1_app.c
-
-CMakeFiles/glib.dir/src/deepstream_test1_app.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/deepstream_test1_app.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/deepstream_test1_app.c > CMakeFiles/glib.dir/src/deepstream_test1_app.c.i
-
-CMakeFiles/glib.dir/src/deepstream_test1_app.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/deepstream_test1_app.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/deepstream_test1_app.c -o CMakeFiles/glib.dir/src/deepstream_test1_app.c.s
-
-CMakeFiles/glib.dir/src/deepstream_test1_app.c.o.requires:
-
-.PHONY : CMakeFiles/glib.dir/src/deepstream_test1_app.c.o.requires
-
-CMakeFiles/glib.dir/src/deepstream_test1_app.c.o.provides: CMakeFiles/glib.dir/src/deepstream_test1_app.c.o.requires
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/deepstream_test1_app.c.o.provides.build
-.PHONY : CMakeFiles/glib.dir/src/deepstream_test1_app.c.o.provides
-
-CMakeFiles/glib.dir/src/deepstream_test1_app.c.o.provides.build: CMakeFiles/glib.dir/src/deepstream_test1_app.c.o
-
-
 CMakeFiles/glib.dir/src/glib_hook.c.o: CMakeFiles/glib.dir/flags.make
 CMakeFiles/glib.dir/src/glib_hook.c.o: ../src/glib_hook.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/glib.dir/src/glib_hook.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_hook.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_hook.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/glib.dir/src/glib_hook.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_hook.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_hook.c
 
 CMakeFiles/glib.dir/src/glib_hook.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/glib_hook.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_hook.c > CMakeFiles/glib.dir/src/glib_hook.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_hook.c > CMakeFiles/glib.dir/src/glib_hook.c.i
 
 CMakeFiles/glib.dir/src/glib_hook.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/glib_hook.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_hook.c -o CMakeFiles/glib.dir/src/glib_hook.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_hook.c -o CMakeFiles/glib.dir/src/glib_hook.c.s
 
 CMakeFiles/glib.dir/src/glib_hook.c.o.requires:
 
@@ -107,16 +83,16 @@ CMakeFiles/glib.dir/src/glib_hook.c.o.provides.build: CMakeFiles/glib.dir/src/gl
 
 CMakeFiles/glib.dir/src/glib_key_value.c.o: CMakeFiles/glib.dir/flags.make
 CMakeFiles/glib.dir/src/glib_key_value.c.o: ../src/glib_key_value.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/glib.dir/src/glib_key_value.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_key_value.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_key_value.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/glib.dir/src/glib_key_value.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_key_value.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_key_value.c
 
 CMakeFiles/glib.dir/src/glib_key_value.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/glib_key_value.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_key_value.c > CMakeFiles/glib.dir/src/glib_key_value.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_key_value.c > CMakeFiles/glib.dir/src/glib_key_value.c.i
 
 CMakeFiles/glib.dir/src/glib_key_value.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/glib_key_value.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_key_value.c -o CMakeFiles/glib.dir/src/glib_key_value.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_key_value.c -o CMakeFiles/glib.dir/src/glib_key_value.c.s
 
 CMakeFiles/glib.dir/src/glib_key_value.c.o.requires:
 
@@ -129,18 +105,66 @@ CMakeFiles/glib.dir/src/glib_key_value.c.o.provides: CMakeFiles/glib.dir/src/gli
 CMakeFiles/glib.dir/src/glib_key_value.c.o.provides.build: CMakeFiles/glib.dir/src/glib_key_value.c.o
 
 
+CMakeFiles/glib.dir/src/glib_normal_array.c.o: CMakeFiles/glib.dir/flags.make
+CMakeFiles/glib.dir/src/glib_normal_array.c.o: ../src/glib_normal_array.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/glib.dir/src/glib_normal_array.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_normal_array.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_normal_array.c
+
+CMakeFiles/glib.dir/src/glib_normal_array.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/glib_normal_array.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_normal_array.c > CMakeFiles/glib.dir/src/glib_normal_array.c.i
+
+CMakeFiles/glib.dir/src/glib_normal_array.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/glib_normal_array.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_normal_array.c -o CMakeFiles/glib.dir/src/glib_normal_array.c.s
+
+CMakeFiles/glib.dir/src/glib_normal_array.c.o.requires:
+
+.PHONY : CMakeFiles/glib.dir/src/glib_normal_array.c.o.requires
+
+CMakeFiles/glib.dir/src/glib_normal_array.c.o.provides: CMakeFiles/glib.dir/src/glib_normal_array.c.o.requires
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_normal_array.c.o.provides.build
+.PHONY : CMakeFiles/glib.dir/src/glib_normal_array.c.o.provides
+
+CMakeFiles/glib.dir/src/glib_normal_array.c.o.provides.build: CMakeFiles/glib.dir/src/glib_normal_array.c.o
+
+
+CMakeFiles/glib.dir/src/glib_ptr_array.c.o: CMakeFiles/glib.dir/flags.make
+CMakeFiles/glib.dir/src/glib_ptr_array.c.o: ../src/glib_ptr_array.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/glib.dir/src/glib_ptr_array.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_ptr_array.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_ptr_array.c
+
+CMakeFiles/glib.dir/src/glib_ptr_array.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/glib_ptr_array.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_ptr_array.c > CMakeFiles/glib.dir/src/glib_ptr_array.c.i
+
+CMakeFiles/glib.dir/src/glib_ptr_array.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/glib_ptr_array.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_ptr_array.c -o CMakeFiles/glib.dir/src/glib_ptr_array.c.s
+
+CMakeFiles/glib.dir/src/glib_ptr_array.c.o.requires:
+
+.PHONY : CMakeFiles/glib.dir/src/glib_ptr_array.c.o.requires
+
+CMakeFiles/glib.dir/src/glib_ptr_array.c.o.provides: CMakeFiles/glib.dir/src/glib_ptr_array.c.o.requires
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_ptr_array.c.o.provides.build
+.PHONY : CMakeFiles/glib.dir/src/glib_ptr_array.c.o.provides
+
+CMakeFiles/glib.dir/src/glib_ptr_array.c.o.provides.build: CMakeFiles/glib.dir/src/glib_ptr_array.c.o
+
+
 CMakeFiles/glib.dir/src/glib_str.c.o: CMakeFiles/glib.dir/flags.make
 CMakeFiles/glib.dir/src/glib_str.c.o: ../src/glib_str.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/glib.dir/src/glib_str.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_str.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_str.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/glib.dir/src/glib_str.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_str.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_str.c
 
 CMakeFiles/glib.dir/src/glib_str.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/glib_str.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_str.c > CMakeFiles/glib.dir/src/glib_str.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_str.c > CMakeFiles/glib.dir/src/glib_str.c.i
 
 CMakeFiles/glib.dir/src/glib_str.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/glib_str.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_str.c -o CMakeFiles/glib.dir/src/glib_str.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_str.c -o CMakeFiles/glib.dir/src/glib_str.c.s
 
 CMakeFiles/glib.dir/src/glib_str.c.o.requires:
 
@@ -153,18 +177,42 @@ CMakeFiles/glib.dir/src/glib_str.c.o.provides: CMakeFiles/glib.dir/src/glib_str.
 CMakeFiles/glib.dir/src/glib_str.c.o.provides.build: CMakeFiles/glib.dir/src/glib_str.c.o
 
 
+CMakeFiles/glib.dir/src/glib_test.c.o: CMakeFiles/glib.dir/flags.make
+CMakeFiles/glib.dir/src/glib_test.c.o: ../src/glib_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/glib.dir/src/glib_test.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_test.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_test.c
+
+CMakeFiles/glib.dir/src/glib_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/glib_test.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_test.c > CMakeFiles/glib.dir/src/glib_test.c.i
+
+CMakeFiles/glib.dir/src/glib_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/glib_test.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_test.c -o CMakeFiles/glib.dir/src/glib_test.c.s
+
+CMakeFiles/glib.dir/src/glib_test.c.o.requires:
+
+.PHONY : CMakeFiles/glib.dir/src/glib_test.c.o.requires
+
+CMakeFiles/glib.dir/src/glib_test.c.o.provides: CMakeFiles/glib.dir/src/glib_test.c.o.requires
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test.c.o.provides.build
+.PHONY : CMakeFiles/glib.dir/src/glib_test.c.o.provides
+
+CMakeFiles/glib.dir/src/glib_test.c.o.provides.build: CMakeFiles/glib.dir/src/glib_test.c.o
+
+
 CMakeFiles/glib.dir/src/glib_test_tool.c.o: CMakeFiles/glib.dir/flags.make
 CMakeFiles/glib.dir/src/glib_test_tool.c.o: ../src/glib_test_tool.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/glib.dir/src/glib_test_tool.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_test_tool.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_test_tool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/glib.dir/src/glib_test_tool.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_test_tool.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_test_tool.c
 
 CMakeFiles/glib.dir/src/glib_test_tool.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/glib_test_tool.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_test_tool.c > CMakeFiles/glib.dir/src/glib_test_tool.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_test_tool.c > CMakeFiles/glib.dir/src/glib_test_tool.c.i
 
 CMakeFiles/glib.dir/src/glib_test_tool.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/glib_test_tool.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_test_tool.c -o CMakeFiles/glib.dir/src/glib_test_tool.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_test_tool.c -o CMakeFiles/glib.dir/src/glib_test_tool.c.s
 
 CMakeFiles/glib.dir/src/glib_test_tool.c.o.requires:
 
@@ -179,16 +227,16 @@ CMakeFiles/glib.dir/src/glib_test_tool.c.o.provides.build: CMakeFiles/glib.dir/s
 
 CMakeFiles/glib.dir/src/glib_timer.c.o: CMakeFiles/glib.dir/flags.make
 CMakeFiles/glib.dir/src/glib_timer.c.o: ../src/glib_timer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/glib.dir/src/glib_timer.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_timer.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_timer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/glib.dir/src/glib_timer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/glib.dir/src/glib_timer.c.o   -c /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_timer.c
 
 CMakeFiles/glib.dir/src/glib_timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glib.dir/src/glib_timer.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_timer.c > CMakeFiles/glib.dir/src/glib_timer.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_timer.c > CMakeFiles/glib.dir/src/glib_timer.c.i
 
 CMakeFiles/glib.dir/src/glib_timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glib.dir/src/glib_timer.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/src/glib_timer.c -o CMakeFiles/glib.dir/src/glib_timer.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/src/glib_timer.c -o CMakeFiles/glib.dir/src/glib_timer.c.s
 
 CMakeFiles/glib.dir/src/glib_timer.c.o.requires:
 
@@ -203,25 +251,29 @@ CMakeFiles/glib.dir/src/glib_timer.c.o.provides.build: CMakeFiles/glib.dir/src/g
 
 # Object files for target glib
 glib_OBJECTS = \
-"CMakeFiles/glib.dir/src/deepstream_test1_app.c.o" \
 "CMakeFiles/glib.dir/src/glib_hook.c.o" \
 "CMakeFiles/glib.dir/src/glib_key_value.c.o" \
+"CMakeFiles/glib.dir/src/glib_normal_array.c.o" \
+"CMakeFiles/glib.dir/src/glib_ptr_array.c.o" \
 "CMakeFiles/glib.dir/src/glib_str.c.o" \
+"CMakeFiles/glib.dir/src/glib_test.c.o" \
 "CMakeFiles/glib.dir/src/glib_test_tool.c.o" \
 "CMakeFiles/glib.dir/src/glib_timer.c.o"
 
 # External object files for target glib
 glib_EXTERNAL_OBJECTS =
 
-glib: CMakeFiles/glib.dir/src/deepstream_test1_app.c.o
 glib: CMakeFiles/glib.dir/src/glib_hook.c.o
 glib: CMakeFiles/glib.dir/src/glib_key_value.c.o
+glib: CMakeFiles/glib.dir/src/glib_normal_array.c.o
+glib: CMakeFiles/glib.dir/src/glib_ptr_array.c.o
 glib: CMakeFiles/glib.dir/src/glib_str.c.o
+glib: CMakeFiles/glib.dir/src/glib_test.c.o
 glib: CMakeFiles/glib.dir/src/glib_test_tool.c.o
 glib: CMakeFiles/glib.dir/src/glib_timer.c.o
 glib: CMakeFiles/glib.dir/build.make
 glib: CMakeFiles/glib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable glib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable glib"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -229,10 +281,12 @@ CMakeFiles/glib.dir/build: glib
 
 .PHONY : CMakeFiles/glib.dir/build
 
-CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/deepstream_test1_app.c.o.requires
 CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/glib_hook.c.o.requires
 CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/glib_key_value.c.o.requires
+CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/glib_normal_array.c.o.requires
+CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/glib_ptr_array.c.o.requires
 CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/glib_str.c.o.requires
+CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/glib_test.c.o.requires
 CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/glib_test_tool.c.o.requires
 CMakeFiles/glib.dir/requires: CMakeFiles/glib.dir/src/glib_timer.c.o.requires
 
@@ -243,6 +297,6 @@ CMakeFiles/glib.dir/clean:
 .PHONY : CMakeFiles/glib.dir/clean
 
 CMakeFiles/glib.dir/depend:
-	cd /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1 /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1 /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_base1/build_debug/CMakeFiles/glib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug /home/hdb/proj/DEEP-GSTREAMER/glib_base/glib_sample/build_debug/CMakeFiles/glib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/glib.dir/depend
 
