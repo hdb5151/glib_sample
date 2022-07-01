@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base
+CMAKE_SOURCE_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_sample
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_base/build_debug
+CMAKE_BINARY_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hdb/proj/DEEP-GSTREAMER/glib_base/build_debug/CMakeFiles /home/hdb/proj/DEEP-GSTREAMER/glib_base/build_debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hdb/proj/DEEP-GSTREAMER/glib_base/build_debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -258,6 +258,33 @@ src/glib_ptr_array.c.s:
 	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_ptr_array.c.s
 .PHONY : src/glib_ptr_array.c.s
 
+src/glib_sigle_list.o: src/glib_sigle_list.c.o
+
+.PHONY : src/glib_sigle_list.o
+
+# target to build an object file
+src/glib_sigle_list.c.o:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_sigle_list.c.o
+.PHONY : src/glib_sigle_list.c.o
+
+src/glib_sigle_list.i: src/glib_sigle_list.c.i
+
+.PHONY : src/glib_sigle_list.i
+
+# target to preprocess a source file
+src/glib_sigle_list.c.i:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_sigle_list.c.i
+.PHONY : src/glib_sigle_list.c.i
+
+src/glib_sigle_list.s: src/glib_sigle_list.c.s
+
+.PHONY : src/glib_sigle_list.s
+
+# target to generate assembly for a file
+src/glib_sigle_list.c.s:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_sigle_list.c.s
+.PHONY : src/glib_sigle_list.c.s
+
 src/glib_str.o: src/glib_str.c.o
 
 .PHONY : src/glib_str.o
@@ -390,6 +417,9 @@ help:
 	@echo "... src/glib_ptr_array.o"
 	@echo "... src/glib_ptr_array.i"
 	@echo "... src/glib_ptr_array.s"
+	@echo "... src/glib_sigle_list.o"
+	@echo "... src/glib_sigle_list.i"
+	@echo "... src/glib_sigle_list.s"
 	@echo "... src/glib_str.o"
 	@echo "... src/glib_str.i"
 	@echo "... src/glib_str.s"

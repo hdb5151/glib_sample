@@ -6,18 +6,18 @@
 /**
  * @brief
 "ASCII字符判断"
-      gboolean 	g_str_is_ascii ()  // 判断一个字符串是否全部由ascii字符组成
-      gboolean 	g_ascii_isalnum ()  // 一个字符是否为字母或数字组成
-      gboolean 	g_ascii_isalpha ()  // 一个字符是否为字母
-      gboolean 	g_ascii_iscntrl ()  // 一个字符是否为控制字符
-      gboolean 	g_ascii_isdigit ()  // 一个字符是否为数字
-      gboolean 	g_ascii_isgraph ()  // 一个字符是否为图形字符
-      gboolean 	g_ascii_islower ()  // 一个字符是否为小写字母
-      gboolean 	g_ascii_isprint ()  // 一个字符是否为可打印字符
-      gboolean 	g_ascii_ispunct ()  // 一个字符是否为标点符号
-      gboolean 	g_ascii_isspace ()  // 一个字符是否为空格
-      gboolean 	g_ascii_isupper ()  // 一个字符是否为大写字母
-      gboolean 	g_ascii_isxdigit ()  // 一个字符是否为十六进制数字
+      gboolean 	g_str_is_ascii ()       // 判断一个字符串是否全部由ascii字符组成
+      gboolean 	g_ascii_isalnum ()      // 一个字符是否为字母或数字组成
+      gboolean 	g_ascii_isalpha ()      // 一个字符是否为字母
+      gboolean 	g_ascii_iscntrl ()      // 一个字符是否为控制字符
+      gboolean 	g_ascii_isdigit ()      // 一个字符是否为数字
+      gboolean 	g_ascii_isgraph ()      // 一个字符是否为图形字符
+      gboolean 	g_ascii_islower ()      // 一个字符是否为小写字母
+      gboolean 	g_ascii_isprint ()      // 一个字符是否为可打印字符
+      gboolean 	g_ascii_ispunct ()      // 一个字符是否为标点符号
+      gboolean 	g_ascii_isspace ()      // 一个字符是否为空格
+      gboolean 	g_ascii_isupper ()      // 一个字符是否为大写字母
+      gboolean 	g_ascii_isxdigit ()     // 一个字符是否为十六进制数字
 
 "格式化字符串"
       g_printf_xxx函数族，类似于printf。
@@ -127,224 +127,232 @@
 https : // www.cnblogs.com/tears-of-ramos/p/3929175.html
 #define MAX_LEN 100
         gchar *
-        demo(char *msg, ...) {
-    gchar *pcfgfile = NULL, *para = NULL;
-    va_list argp;
-    va_start(argp, msg); // msg其实指的是第一个参数，这个函数是让argp指向demo实参的栈底，参数是按从右往左的顺序压入栈的，argp不包含msg
-    pcfgfile = g_strdup_vprintf("%s %s %s %d", argp);
-    va_end(argp);
-    return pcfgfile;
+        demo(char *msg, ...)
+{
+      gchar *pcfgfile = NULL, *para = NULL;
+      va_list argp;
+      va_start(argp, msg); // msg其实指的是第一个参数，这个函数是让argp指向demo实参的栈底，参数是按从右往左的顺序压入栈的，argp不包含msg
+      pcfgfile = g_strdup_vprintf("%s %s %s %d", argp);
+      va_end(argp);
+      return pcfgfile;
 }
-int main(void) {
-    gchar *pfilename = "houjiao";
-    gchar *strdouble = "11.11";
-    gchar *strint = "123456;8910";
-    gchar *test_str = NULL, *hj = NULL;
-    gint len = 0;
-    gchar buff_str[MAX_LEN + 1];
-    guint64 imsi = 123456789;
-    gdouble test_duble = 0.0;
-    gchar **str_array = NULL;
+int main(void)
+{
+      gchar *pfilename = "houjiao";
+      gchar *strdouble = "11.11";
+      gchar *strint = "123456;8910";
+      gchar *test_str = NULL, *hj = NULL;
+      gint len = 0;
+      gchar buff_str[MAX_LEN + 1];
+      guint64 imsi = 123456789;
+      gdouble test_duble = 0.0;
+      gchar **str_array = NULL;
 
-    //----------------------------------------------------------一 ------------------------------------------------------------------------
-    //下面的这些函数会返回一个新的字符串缓冲区的指针，所以你在使用完后必须要释放它们。
-    //--------------------------------------------------------------------------------------------------------------------------------------
-    /*
-    gchar *g_strdup(const gchar *str)
-    复制str并返回它的一个拷贝。并非返回原来字符串的指针而是重新申请一块内存将其指针返回。
-hj = g_strdup(pfilename);
-test_str = g_strdup(hj);
-g_free(hj);
-hj = NULL;
-g_print("%s\n", test_str); //输出good
+      //----------------------------------------------------------一 ------------------------------------------------------------------------
+      //下面的这些函数会返回一个新的字符串缓冲区的指针，所以你在使用完后必须要释放它们。
+      //--------------------------------------------------------------------------------------------------------------------------------------
+      /*
+      gchar *g_strdup(const gchar *str)
+      复制str并返回它的一个拷贝。并非返回原来字符串的指针而是重新申请一块内存将其指针返回。
+  hj = g_strdup(pfilename);
+  test_str = g_strdup(hj);
+  g_free(hj);
+  hj = NULL;
+  g_print("%s\n", test_str); //输出good
 
-/*
-gchar *strnfill(gsize length, gchar *fill_char)
-创建一个长度为length并被fill_char填充的字符串。如果fill_char为0则创建一个空字符串 */
-    test_str = g_strnfill(10, 0);
-    g_print("%s\n", test_str);
-    g_free(test_str);
-    test_str = NULL;
+  /*
+  gchar *strnfill(gsize length, gchar *fill_char)
+  创建一个长度为length并被fill_char填充的字符串。如果fill_char为0则创建一个空字符串 */
+      test_str = g_strnfill(10, 0);
+      g_print("%s\n", test_str);
+      g_free(test_str);
+      test_str = NULL;
 
-    /*
-    gchar *g_strdup_printf(const gchar *format, ...)
-    像sprintf()一样格式化字符串和参数。但是，你没必要像sprintf()一样创建和指定一个缓冲区，GLib将这些自动做了。适合用于字符串拼 */
-    test_str = g_strdup_printf("%s_%u", pfilename, 1);
-    g_print("%s\n", test_str);
+      /*
+      gchar *g_strdup_printf(const gchar *format, ...)
+      像sprintf()一样格式化字符串和参数。但是，你没必要像sprintf()一样创建和指定一个缓冲区，GLib将这些自动做了。适合用于字符串拼 */
+      test_str = g_strdup_printf("%s_%u", pfilename, 1);
+      g_print("%s\n", test_str);
 
-    /*测试g_strdup_vprintf的拼接功能 类似上面g_strdup_printf函数的功能*/
-    test_str = demo("", "hj", "is", "number", 1); //输出this is a demo！
-    g_print("%s\n", test_str);
-    g_free(test_str);
-    test_str = NULL;
+      /*测试g_strdup_vprintf的拼接功能 类似上面g_strdup_printf函数的功能*/
+      test_str = demo("", "hj", "is", "number", 1); //输出this is a demo！
+      g_print("%s\n", test_str);
+      g_free(test_str);
+      test_str = NULL;
 
-    /*
-    gchar *g_strconcat(const gchar *string1, ..., NULL)
-    它接受任意数量的string作为参数，并返回它们的连接后的字符串。必须将NULL作为这个函数的最后一个参数 */
-    hj = g_strdup(pfilename);
-    test_str = g_strconcat("   ", hj, ":", "good person", NULL); //输出   houjiao:good person
-    g_print("%s\n", test_str);
-    g_free(test_str);
-    test_str = NULL;
+      /*
+      gchar *g_strconcat(const gchar *string1, ..., NULL)
+      它接受任意数量的string作为参数，并返回它们的连接后的字符串。必须将NULL作为这个函数的最后一个参数 */
+      hj = g_strdup(pfilename);
+      test_str = g_strconcat("   ", hj, ":", "good person", NULL); //输出   houjiao:good person
+      g_print("%s\n", test_str);
+      g_free(test_str);
+      test_str = NULL;
 
-    //----------------------------------------------------------二 ------------------------------------------------------------------------
-    //在下面的函数中，你应该为返回的结果申请空间。GLib并不会返回一个拷贝给你。它们与C相对应的函数非常像，参数要包含一个足够大的缓冲区来进行字符串处理。
-    //--------------------------------------------------------------------------------------------------------------------------------------
-    /*
-    gchar *g_stpcpy(gchar *dest, const gchar *src)
-    拷贝src到dest，包括最后的NULL字符。如果它执行成功，会返回dest中结束符拷贝的指针。*/
-    test_str = (gchar *)g_malloc0(strlen(hj));
-    g_stpcpy(test_str, hj);    //函数返回的是结束符拷贝的指针这里即返回空字符串
-    g_print("%s\n", test_str); //输出，good
-    g_slice_free1(strlen(hj), test_str);
-    test_str = NULL;
+      //----------------------------------------------------------二 ------------------------------------------------------------------------
+      //在下面的函数中，你应该为返回的结果申请空间。GLib并不会返回一个拷贝给你。它们与C相对应的函数非常像，参数要包含一个足够大的缓冲区来进行字符串处理。
+      //--------------------------------------------------------------------------------------------------------------------------------------
+      /*
+      gchar *g_stpcpy(gchar *dest, const gchar *src)
+      拷贝src到dest，包括最后的NULL字符。如果它执行成功，会返回dest中结束符拷贝的指针。*/
+      test_str = (gchar *)g_malloc0(strlen(hj));
+      g_stpcpy(test_str, hj);    //函数返回的是结束符拷贝的指针这里即返回空字符串
+      g_print("%s\n", test_str); //输出，good
+      g_slice_free1(strlen(hj), test_str);
+      test_str = NULL;
 
-    /*
-    gint g_snprintf(gchar *string, gulong n, const gchar *format, ...)
-    你必须确保string有足够大的空间。而且你必须要用n来指定这个缓冲区的大小。返回值是输出字符串的长度，也有可能这个输出字符串为了适应缓冲区的大小而被截断 */
-    len += g_snprintf(buff_str + len, MAX_LEN - len, "%d,%d,%d,%" G_GINT64_FORMAT "", 1, 2, 3, imsi);
-    g_print("%s\n", buff_str); //输出1，2,3,123456789
+      /*
+      gint g_snprintf(gchar *string, gulong n, const gchar *format, ...)
+      你必须确保string有足够大的空间。而且你必须要用n来指定这个缓冲区的大小。返回值是输出字符串的长度，也有可能这个输出字符串为了适应缓冲区的大小而被截断 */
+      len += g_snprintf(buff_str + len, MAX_LEN - len, "%d,%d,%d,%" G_GINT64_FORMAT "", 1, 2, 3, imsi);
+      g_print("%s\n", buff_str); //输出1，2,3,123456789
 
-    /*测试g_strchug删除字符串开始的空格*/
-    test_str = g_strconcat("   ", hj, ":", "good person     ", NULL);
-    test_str = g_strchug(test_str); //输出houjiao:good person     光标在这
-    g_print("%s\n", test_str);
+      /*测试g_strchug删除字符串开始的空格*/
+      test_str = g_strconcat("   ", hj, ":", "good person     ", NULL);
+      test_str = g_strchug(test_str); //输出houjiao:good person     光标在这
+      g_print("%s\n", test_str);
 
-    /*
-    gchar *g_strchomp(gchar *string)
-    将string结尾的空格都删掉，返回string */
-    test_str = g_strchomp(test_str);
-    g_print("%s\n", test_str); // houjiao:good person
-    g_free(test_str);
-    test_str = NULL;
+      /*
+      gchar *g_strchomp(gchar *string)
+      将string结尾的空格都删掉，返回string */
+      test_str = g_strchomp(test_str);
+      g_print("%s\n", test_str); // houjiao:good person
+      g_free(test_str);
+      test_str = NULL;
 
-    /*
-    gchar *g_strstrip(gchar *string)
-    将string开头和结尾的空白字符都删掉，返回string。*/
-    test_str = g_strconcat("   ", hj, ":", "good person     ", NULL);
-    test_str = g_strstrip(test_str);
-    g_print("%s\n", test_str); //输出houjiao:good person
+      /*
+      gchar *g_strstrip(gchar *string)
+      将string开头和结尾的空白字符都删掉，返回string。*/
+      test_str = g_strconcat("   ", hj, ":", "good person     ", NULL);
+      test_str = g_strstrip(test_str);
+      g_print("%s\n", test_str); //输出houjiao:good person
 
-    /*
-    gchar *g_strdelimit(gchar *string, const gchar *delimiters, gchar *new_delimiter)
-    将string中的delimiters各个字符都替换为new_delimiter这一个字符 */
-    test_str = g_strdelimit(test_str, "good", 'a');
-    g_print("%s\n", test_str); // haujiaa:aaaa persan
-    g_free(test_str);
-    test_str = NULL;
+      /*
+      gchar *g_strdelimit(gchar *string, const gchar *delimiters, gchar *new_delimiter)
+      将string中的delimiters各个字符都替换为new_delimiter这一个字符 */
+      test_str = g_strdelimit(test_str, "good", 'a');
+      g_print("%s\n", test_str); // haujiaa:aaaa persan
+      g_free(test_str);
+      test_str = NULL;
 
-    //----------------------------------------------------------三、 ------------------------------------------------------------------------
-    //在下面的函数中，除了g_ascii_dtostr()之外，都不改变它们的参数。
-    //--------------------------------------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------三、 ------------------------------------------------------------------------
+      //在下面的函数中，除了g_ascii_dtostr()之外，都不改变它们的参数。
+      //--------------------------------------------------------------------------------------------------------------------------------------
 
-    /*
-    gchar *g_strstr_len(const gchar *haystack, gssize haystack_len, const gchar *needle)
-    在haystack中遍历haystack_len长度，如果找到了needle字串，则返回这个位置的指针，如果没有找到则返回NULL。*/
-    test_str = g_strstr_len(pfilename, strlen(pfilename), "jia");
-    g_print("%s\n", test_str); //输出jiao
-    test_str = NULL;
+      /*
+      gchar *g_strstr_len(const gchar *haystack, gssize haystack_len, const gchar *needle)
+      在haystack中遍历haystack_len长度，如果找到了needle字串，则返回这个位置的指针，如果没有找到则返回NULL。*/
+      test_str = g_strstr_len(pfilename, strlen(pfilename), "jia");
+      g_print("%s\n", test_str); //输出jiao
+      test_str = NULL;
 
-    /*
-    gchar *g_strrstr(const gchar *haystack, const gchar *needle)
-    类似于g_strstr_len，这个函数将会从后面开始查找，但是它并没有haystack_len参数。 */
-    test_str = g_strrstr(pfilename, "jia");
-    g_print("%s\n", test_str); //输出jiao
-    test_str = NULL;
+      /*
+      gchar *g_strrstr(const gchar *haystack, const gchar *needle)
+      类似于g_strstr_len，这个函数将会从后面开始查找，但是它并没有haystack_len参数。 */
+      test_str = g_strrstr(pfilename, "jia");
+      g_print("%s\n", test_str); //输出jiao
+      test_str = NULL;
 
-    /*
-    gchar *g_strrstr_len(gchar *haystack, gssize haystack_len, gchar *needle)
-    与g_strrstr()相同，但是它只在前haystack_len个字符中查找,第二个参数是-1表示在整个字符串中找*/
-    test_str = g_strrstr_len(pfilename, -1, "a");
-    g_print("%s\n", test_str);
-    test_str = g_strrstr_len(pfilename, 5, "a");
-    g_print("%s\n", test_str); //输出(null)
+      /*
+      gchar *g_strrstr_len(gchar *haystack, gssize haystack_len, gchar *needle)
+      与g_strrstr()相同，但是它只在前haystack_len个字符中查找,第二个参数是-1表示在整个字符串中找*/
+      test_str = g_strrstr_len(pfilename, -1, "a");
+      g_print("%s\n", test_str);
+      test_str = g_strrstr_len(pfilename, 5, "a");
+      g_print("%s\n", test_str); //输出(null)
 
-    /*
-    gdouble g_ascii_strtod(const gchar *nptr, gchar **endptr)
-    将string转为双字长度的浮点数。如果你提供了一个有效的endptr指针地址，这个函数会将指针设置到string中被转换的最后一个字符的位置*/
-    test_duble = g_ascii_strtod(strdouble, NULL);
-    g_print("%.2f\n", test_duble); //输出11.11
+      /*
+      gdouble g_ascii_strtod(const gchar *nptr, gchar **endptr)
+      将string转为双字长度的浮点数。如果你提供了一个有效的endptr指针地址，这个函数会将指针设置到string中被转换的最后一个字符的位置*/
+      test_duble = g_ascii_strtod(strdouble, NULL);
+      g_print("%.2f\n", test_duble); //输出11.11
 
-    /*
-    gchar **g_strsplit(const gchar *string, const gchar *delimiter, gint max_tokens)
-    使用delimiter来将string切割成至多max_tokens个部分。返回值是新申请的一个字符串数组，用来保存被切割的这些部分。
-    这个字符串数组必须由你自己释放。 如果输入字符串是空的，这个返回值也是一个空的数组。 该法不改变原string */
-    str_array = g_strsplit(strint, ";", 3);
-    g_print("%s,%s\n", str_array[0], str_array[1]); // 123456,8910
+      /*
+      gchar **g_strsplit(const gchar *string, const gchar *delimiter, gint max_tokens)
+      使用delimiter来将string切割成至多max_tokens个部分。返回值是新申请的一个字符串数组，用来保存被切割的这些部分。
+      这个字符串数组必须由你自己释放。 如果输入字符串是空的，这个返回值也是一个空的数组。 该法不改变原string */
+      str_array = g_strsplit(strint, ";", 3);
+      g_print("%s,%s\n", str_array[0], str_array[1]); // 123456,8910
 
-    /*
-    gchar *g_str_joinv(const gchar *separator, gchar **str_array)
-    将字符串数组组合成单个字符串，并将这个新申请的字符串返回。如果separator不空，g_str_joinv()会在每个字符串之间添加上一个separator分隔符。*/
-    test_str = g_strjoinv(",", str_array);
-    g_print("%s\n", test_str); // 123456,8910
-    g_strfreev(str_array);
-    str_array = NULL;
-    g_free(test_str);
-    test_str = NULL;
+      /*
+      gchar *g_str_joinv(const gchar *separator, gchar **str_array)
+      将字符串数组组合成单个字符串，并将这个新申请的字符串返回。如果separator不空，g_str_joinv()会在每个字符串之间添加上一个separator分隔符。*/
+      test_str = g_strjoinv(",", str_array);
+      g_print("%s\n", test_str); // 123456,8910
+      g_strfreev(str_array);
+      str_array = NULL;
+      g_free(test_str);
+      test_str = NULL;
 
-    /*测试g_ascii_strtoll将字符串转成对应整形的功能第三个参数是指的几进制*/
-    test_str = strchr(strint, ';');
-    len = (gint)g_ascii_strtoll(strint, NULL, 10);
-    g_print("%d\n", len); //输出123456
-    strint = test_str + 1;
-    len = (gint)g_ascii_strtoll(strint, NULL, 10);
-    g_print("%d\n", len); //输出8910
-    g_free(test_str);
-    test_str = NULL;
-    return TRUE;
+      /*测试g_ascii_strtoll将字符串转成对应整形的功能第三个参数是指的几进制*/
+      test_str = strchr(strint, ';');
+      len = (gint)g_ascii_strtoll(strint, NULL, 10);
+      g_print("%d\n", len); //输出123456
+      strint = test_str + 1;
+      len = (gint)g_ascii_strtoll(strint, NULL, 10);
+      g_print("%d\n", len); //输出8910
+      g_free(test_str);
+      test_str = NULL;
+      return TRUE;
 }
 二、glib的主循环功能主要是为了看看主循环的串行
 
     /*
     自定义的事件源是一个继承 GSource 的结构体,即自定义事件源的结构体 的第一个成员是 GSource 结构体, 其后便可放置程序所需数据, 例如:*/
     typedef struct _MySource MySource;
-struct _MySource {
-    GSource source;
-    gchar text[256];
+struct _MySource
+{
+      GSource source;
+      gchar text[256];
 };
 /*
 实现了事件源数据结构的定义之后,还需要实现事件源所规定的接口,主要为 prepare, check, dispatch, finalize 等事件处理函数(回调函数),它们包含于 GSourceFuncs 结构体中。
 将 GSourceFuncs 结构以及事件源结构的存储空间宽度作为参数传给 g_source_new 便可构造一个新的事件源,继而可使用 g_source_attach 函数将新的事件源添加到主循环上下文中
 */
-static gboolean prepare(GSource *source, gint *timeout) {
-    *timeout = 0;
+static gboolean prepare(GSource *source, gint *timeout)
+{
+      *timeout = 0;
 
-    return TRUE;
+      return TRUE;
 }
 
-static gboolean check(GSource *source) {
-    return TRUE;
+static gboolean check(GSource *source)
+{
+      return TRUE;
 }
 
-static gboolean dispatch(GSource *source, GSourceFunc callback, gpointer user_data) {
-    int i = 0;
-    MySource *mysource = (MySource *)source;
+static gboolean dispatch(GSource *source, GSourceFunc callback, gpointer user_data)
+{
+      int i = 0;
+      MySource *mysource = (MySource *)source;
 
-    for (; i < 6; i++) {
-        g_print("%s%d\n", mysource->text, i);
-    }
+      for (; i < 6; i++)
+      {
+            g_print("%s%d\n", mysource->text, i);
+      }
 
-    return TRUE;
+      return TRUE;
 }
 
-g_main_loop_run 函数运行时, 会迭代访问 GMainContext 的事件源列表, 步骤大致如下 : a.g_main_loop_run 通过调用事件源的 prepare 接口并判断其返回值以确定各事件源是否作好准备。如果各事件源的 prepare 接口的返回值为 TRUE, 即表示该事件源已经作好准备, 否则表示尚未做好准备。显然, 上述程序所定义的事件源是已经作好了准备。 b.若某事件源尚未作好准备, 那么 g_main_loop 会在处理完那些已经准备好的事件后再次询问该事件源是否作好准备, 这一过程是通过调用事件源的 check 接口而实现的, 如果事件源依然未作好准备, 即 check 接口的返回 FALSE, 那么 g_main_loop_run 会让主事件循环进入睡眠状态。 主事件循环的睡眠时间是步骤 a 中遍历时间源时所统计的最小时间间隔, 例如在 prepare 接口中可以像下面这样设置时间间隔。到达一定时间后, g_main_loop_run 会唤醒主事件循环, 再次询问。如此周而复始, 直至事件源的 prepare 接口返回值为 TRUE。 int main1(void) {
-    GMainLoop *loop = g_main_loop_new(NULL, TRUE);
-    GMainContext *context = g_main_loop_get_context(loop);
-    GSourceFuncs source_funcs = {prepare, check, dispatch, NULL};
-    GSource *source = g_source_new(&source_funcs, sizeof(MySource));
+g_main_loop_run 函数运行时, 会迭代访问 GMainContext 的事件源列表, 步骤大致如下 : a.g_main_loop_run 通过调用事件源的 prepare 接口并判断其返回值以确定各事件源是否作好准备。如果各事件源的 prepare 接口的返回值为 TRUE, 即表示该事件源已经作好准备, 否则表示尚未做好准备。显然, 上述程序所定义的事件源是已经作好了准备。 b.若某事件源尚未作好准备, 那么 g_main_loop 会在处理完那些已经准备好的事件后再次询问该事件源是否作好准备, 这一过程是通过调用事件源的 check 接口而实现的, 如果事件源依然未作好准备, 即 check 接口的返回 FALSE, 那么 g_main_loop_run 会让主事件循环进入睡眠状态。 主事件循环的睡眠时间是步骤 a 中遍历时间源时所统计的最小时间间隔, 例如在 prepare 接口中可以像下面这样设置时间间隔。到达一定时间后, g_main_loop_run 会唤醒主事件循环, 再次询问。如此周而复始, 直至事件源的 prepare 接口返回值为 TRUE。 int main1(void)
+{
+      GMainLoop *loop = g_main_loop_new(NULL, TRUE);
+      GMainContext *context = g_main_loop_get_context(loop);
+      GSourceFuncs source_funcs = {prepare, check, dispatch, NULL};
+      GSource *source = g_source_new(&source_funcs, sizeof(MySource));
 
-    g_sprintf(((MySource *)source)->text, "Hello world");
+      g_sprintf(((MySource *)source)->text, "Hello world");
 
-    g_timeout_add(100, timeout_func, loop);
-    g_source_attach(source, context);
-    g_source_unref(source);
+      g_timeout_add(100, timeout_func, loop);
+      g_source_attach(source, context);
+      g_source_unref(source);
 
-    g_main_loop_run(loop);
+      g_main_loop_run(loop);
 
-    g_main_context_unref(context);
-    g_main_loop_unref(loop);
+      g_main_context_unref(context);
+      g_main_loop_unref(loop);
 
-    return 0;
+      return 0;
 }
 
 #endif
