@@ -150,6 +150,33 @@ src/glib_byte_array.c.s:
 	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_byte_array.c.s
 .PHONY : src/glib_byte_array.c.s
 
+src/glib_err.o: src/glib_err.c.o
+
+.PHONY : src/glib_err.o
+
+# target to build an object file
+src/glib_err.c.o:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_err.c.o
+.PHONY : src/glib_err.c.o
+
+src/glib_err.i: src/glib_err.c.i
+
+.PHONY : src/glib_err.i
+
+# target to preprocess a source file
+src/glib_err.c.i:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_err.c.i
+.PHONY : src/glib_err.c.i
+
+src/glib_err.s: src/glib_err.c.s
+
+.PHONY : src/glib_err.s
+
+# target to generate assembly for a file
+src/glib_err.c.s:
+	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_err.c.s
+.PHONY : src/glib_err.c.s
+
 src/glib_hook.o: src/glib_hook.c.o
 
 .PHONY : src/glib_hook.o
@@ -405,6 +432,9 @@ help:
 	@echo "... src/glib_byte_array.o"
 	@echo "... src/glib_byte_array.i"
 	@echo "... src/glib_byte_array.s"
+	@echo "... src/glib_err.o"
+	@echo "... src/glib_err.i"
+	@echo "... src/glib_err.s"
 	@echo "... src/glib_hook.o"
 	@echo "... src/glib_hook.i"
 	@echo "... src/glib_hook.s"

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_byte_array.c" "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib.dir/src/glib_byte_array.c.o"
+  "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_err.c" "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib.dir/src/glib_err.c.o"
   "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_hook.c" "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib.dir/src/glib_hook.c.o"
   "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_key_value.c" "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib.dir/src/glib_key_value.c.o"
   "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_normal_array.c" "/home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib.dir/src/glib_normal_array.c.o"

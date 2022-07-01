@@ -48,6 +48,12 @@ glib.h
 glib_byte_array.h
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_byte_array.h
 
+/home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_err.c
+stdio.h
+-
+glib.h
+-
+
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_hook.c
 glib_hook.h
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/src/glib_hook.h

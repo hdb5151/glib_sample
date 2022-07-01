@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/glib.dir/src/glib_byte_array.c.o"
+  "CMakeFiles/glib.dir/src/glib_err.c.o"
   "CMakeFiles/glib.dir/src/glib_hook.c.o"
   "CMakeFiles/glib.dir/src/glib_key_value.c.o"
   "CMakeFiles/glib.dir/src/glib_normal_array.c.o"
