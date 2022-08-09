@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,314 +111,484 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named glib
+# Target rules for targets named glib_timer
 
 # Build rule for target.
-glib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib
-.PHONY : glib
+glib_timer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_timer
+.PHONY : glib_timer
 
 # fast build rule for target.
-glib/fast:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/build
-.PHONY : glib/fast
+glib_timer/fast:
+	$(MAKE) -f CMakeFiles/glib_timer.dir/build.make CMakeFiles/glib_timer.dir/build
+.PHONY : glib_timer/fast
 
-src/glib_byte_array.o: src/glib_byte_array.c.o
+#=============================================================================
+# Target rules for targets named glib_test_tool
 
-.PHONY : src/glib_byte_array.o
+# Build rule for target.
+glib_test_tool: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_test_tool
+.PHONY : glib_test_tool
 
-# target to build an object file
-src/glib_byte_array.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_byte_array.c.o
-.PHONY : src/glib_byte_array.c.o
+# fast build rule for target.
+glib_test_tool/fast:
+	$(MAKE) -f CMakeFiles/glib_test_tool.dir/build.make CMakeFiles/glib_test_tool.dir/build
+.PHONY : glib_test_tool/fast
 
-src/glib_byte_array.i: src/glib_byte_array.c.i
+#=============================================================================
+# Target rules for targets named glib_string
 
-.PHONY : src/glib_byte_array.i
+# Build rule for target.
+glib_string: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_string
+.PHONY : glib_string
 
-# target to preprocess a source file
-src/glib_byte_array.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_byte_array.c.i
-.PHONY : src/glib_byte_array.c.i
+# fast build rule for target.
+glib_string/fast:
+	$(MAKE) -f CMakeFiles/glib_string.dir/build.make CMakeFiles/glib_string.dir/build
+.PHONY : glib_string/fast
 
-src/glib_byte_array.s: src/glib_byte_array.c.s
+#=============================================================================
+# Target rules for targets named glib_sigle_list
 
-.PHONY : src/glib_byte_array.s
+# Build rule for target.
+glib_sigle_list: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_sigle_list
+.PHONY : glib_sigle_list
 
-# target to generate assembly for a file
-src/glib_byte_array.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_byte_array.c.s
-.PHONY : src/glib_byte_array.c.s
+# fast build rule for target.
+glib_sigle_list/fast:
+	$(MAKE) -f CMakeFiles/glib_sigle_list.dir/build.make CMakeFiles/glib_sigle_list.dir/build
+.PHONY : glib_sigle_list/fast
 
-src/glib_err.o: src/glib_err.c.o
+#=============================================================================
+# Target rules for targets named glib_str
 
-.PHONY : src/glib_err.o
+# Build rule for target.
+glib_str: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_str
+.PHONY : glib_str
 
-# target to build an object file
-src/glib_err.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_err.c.o
-.PHONY : src/glib_err.c.o
+# fast build rule for target.
+glib_str/fast:
+	$(MAKE) -f CMakeFiles/glib_str.dir/build.make CMakeFiles/glib_str.dir/build
+.PHONY : glib_str/fast
 
-src/glib_err.i: src/glib_err.c.i
+#=============================================================================
+# Target rules for targets named glib_err
 
-.PHONY : src/glib_err.i
+# Build rule for target.
+glib_err: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_err
+.PHONY : glib_err
 
-# target to preprocess a source file
-src/glib_err.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_err.c.i
-.PHONY : src/glib_err.c.i
+# fast build rule for target.
+glib_err/fast:
+	$(MAKE) -f CMakeFiles/glib_err.dir/build.make CMakeFiles/glib_err.dir/build
+.PHONY : glib_err/fast
 
-src/glib_err.s: src/glib_err.c.s
+#=============================================================================
+# Target rules for targets named glib_test
 
-.PHONY : src/glib_err.s
+# Build rule for target.
+glib_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_test
+.PHONY : glib_test
 
-# target to generate assembly for a file
-src/glib_err.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_err.c.s
-.PHONY : src/glib_err.c.s
+# fast build rule for target.
+glib_test/fast:
+	$(MAKE) -f CMakeFiles/glib_test.dir/build.make CMakeFiles/glib_test.dir/build
+.PHONY : glib_test/fast
 
-src/glib_hook.o: src/glib_hook.c.o
+#=============================================================================
+# Target rules for targets named glib_byte_array
 
-.PHONY : src/glib_hook.o
+# Build rule for target.
+glib_byte_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_byte_array
+.PHONY : glib_byte_array
 
-# target to build an object file
-src/glib_hook.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_hook.c.o
-.PHONY : src/glib_hook.c.o
+# fast build rule for target.
+glib_byte_array/fast:
+	$(MAKE) -f CMakeFiles/glib_byte_array.dir/build.make CMakeFiles/glib_byte_array.dir/build
+.PHONY : glib_byte_array/fast
 
-src/glib_hook.i: src/glib_hook.c.i
+#=============================================================================
+# Target rules for targets named glib_ptr_array
 
-.PHONY : src/glib_hook.i
+# Build rule for target.
+glib_ptr_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_ptr_array
+.PHONY : glib_ptr_array
 
-# target to preprocess a source file
-src/glib_hook.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_hook.c.i
-.PHONY : src/glib_hook.c.i
+# fast build rule for target.
+glib_ptr_array/fast:
+	$(MAKE) -f CMakeFiles/glib_ptr_array.dir/build.make CMakeFiles/glib_ptr_array.dir/build
+.PHONY : glib_ptr_array/fast
 
-src/glib_hook.s: src/glib_hook.c.s
+#=============================================================================
+# Target rules for targets named glib_key_value
 
-.PHONY : src/glib_hook.s
+# Build rule for target.
+glib_key_value: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_key_value
+.PHONY : glib_key_value
 
-# target to generate assembly for a file
-src/glib_hook.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_hook.c.s
-.PHONY : src/glib_hook.c.s
+# fast build rule for target.
+glib_key_value/fast:
+	$(MAKE) -f CMakeFiles/glib_key_value.dir/build.make CMakeFiles/glib_key_value.dir/build
+.PHONY : glib_key_value/fast
 
-src/glib_key_value.o: src/glib_key_value.c.o
+#=============================================================================
+# Target rules for targets named glib_hook
 
-.PHONY : src/glib_key_value.o
+# Build rule for target.
+glib_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_hook
+.PHONY : glib_hook
 
-# target to build an object file
-src/glib_key_value.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_key_value.c.o
-.PHONY : src/glib_key_value.c.o
+# fast build rule for target.
+glib_hook/fast:
+	$(MAKE) -f CMakeFiles/glib_hook.dir/build.make CMakeFiles/glib_hook.dir/build
+.PHONY : glib_hook/fast
 
-src/glib_key_value.i: src/glib_key_value.c.i
+#=============================================================================
+# Target rules for targets named glib_normal_array
 
-.PHONY : src/glib_key_value.i
+# Build rule for target.
+glib_normal_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_normal_array
+.PHONY : glib_normal_array
 
-# target to preprocess a source file
-src/glib_key_value.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_key_value.c.i
-.PHONY : src/glib_key_value.c.i
+# fast build rule for target.
+glib_normal_array/fast:
+	$(MAKE) -f CMakeFiles/glib_normal_array.dir/build.make CMakeFiles/glib_normal_array.dir/build
+.PHONY : glib_normal_array/fast
 
-src/glib_key_value.s: src/glib_key_value.c.s
+src/glib_byte_array/glib_byte_array.o: src/glib_byte_array/glib_byte_array.c.o
 
-.PHONY : src/glib_key_value.s
-
-# target to generate assembly for a file
-src/glib_key_value.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_key_value.c.s
-.PHONY : src/glib_key_value.c.s
-
-src/glib_normal_array.o: src/glib_normal_array.c.o
-
-.PHONY : src/glib_normal_array.o
-
-# target to build an object file
-src/glib_normal_array.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_normal_array.c.o
-.PHONY : src/glib_normal_array.c.o
-
-src/glib_normal_array.i: src/glib_normal_array.c.i
-
-.PHONY : src/glib_normal_array.i
-
-# target to preprocess a source file
-src/glib_normal_array.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_normal_array.c.i
-.PHONY : src/glib_normal_array.c.i
-
-src/glib_normal_array.s: src/glib_normal_array.c.s
-
-.PHONY : src/glib_normal_array.s
-
-# target to generate assembly for a file
-src/glib_normal_array.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_normal_array.c.s
-.PHONY : src/glib_normal_array.c.s
-
-src/glib_ptr_array.o: src/glib_ptr_array.c.o
-
-.PHONY : src/glib_ptr_array.o
-
-# target to build an object file
-src/glib_ptr_array.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_ptr_array.c.o
-.PHONY : src/glib_ptr_array.c.o
-
-src/glib_ptr_array.i: src/glib_ptr_array.c.i
-
-.PHONY : src/glib_ptr_array.i
-
-# target to preprocess a source file
-src/glib_ptr_array.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_ptr_array.c.i
-.PHONY : src/glib_ptr_array.c.i
-
-src/glib_ptr_array.s: src/glib_ptr_array.c.s
-
-.PHONY : src/glib_ptr_array.s
-
-# target to generate assembly for a file
-src/glib_ptr_array.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_ptr_array.c.s
-.PHONY : src/glib_ptr_array.c.s
-
-src/glib_sigle_list.o: src/glib_sigle_list.c.o
-
-.PHONY : src/glib_sigle_list.o
+.PHONY : src/glib_byte_array/glib_byte_array.o
 
 # target to build an object file
-src/glib_sigle_list.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_sigle_list.c.o
-.PHONY : src/glib_sigle_list.c.o
+src/glib_byte_array/glib_byte_array.c.o:
+	$(MAKE) -f CMakeFiles/glib_byte_array.dir/build.make CMakeFiles/glib_byte_array.dir/src/glib_byte_array/glib_byte_array.c.o
+.PHONY : src/glib_byte_array/glib_byte_array.c.o
 
-src/glib_sigle_list.i: src/glib_sigle_list.c.i
+src/glib_byte_array/glib_byte_array.i: src/glib_byte_array/glib_byte_array.c.i
 
-.PHONY : src/glib_sigle_list.i
+.PHONY : src/glib_byte_array/glib_byte_array.i
 
 # target to preprocess a source file
-src/glib_sigle_list.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_sigle_list.c.i
-.PHONY : src/glib_sigle_list.c.i
+src/glib_byte_array/glib_byte_array.c.i:
+	$(MAKE) -f CMakeFiles/glib_byte_array.dir/build.make CMakeFiles/glib_byte_array.dir/src/glib_byte_array/glib_byte_array.c.i
+.PHONY : src/glib_byte_array/glib_byte_array.c.i
 
-src/glib_sigle_list.s: src/glib_sigle_list.c.s
+src/glib_byte_array/glib_byte_array.s: src/glib_byte_array/glib_byte_array.c.s
 
-.PHONY : src/glib_sigle_list.s
+.PHONY : src/glib_byte_array/glib_byte_array.s
 
 # target to generate assembly for a file
-src/glib_sigle_list.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_sigle_list.c.s
-.PHONY : src/glib_sigle_list.c.s
+src/glib_byte_array/glib_byte_array.c.s:
+	$(MAKE) -f CMakeFiles/glib_byte_array.dir/build.make CMakeFiles/glib_byte_array.dir/src/glib_byte_array/glib_byte_array.c.s
+.PHONY : src/glib_byte_array/glib_byte_array.c.s
 
-src/glib_str.o: src/glib_str.c.o
+src/glib_err/glib_err.o: src/glib_err/glib_err.c.o
 
-.PHONY : src/glib_str.o
+.PHONY : src/glib_err/glib_err.o
 
 # target to build an object file
-src/glib_str.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_str.c.o
-.PHONY : src/glib_str.c.o
+src/glib_err/glib_err.c.o:
+	$(MAKE) -f CMakeFiles/glib_err.dir/build.make CMakeFiles/glib_err.dir/src/glib_err/glib_err.c.o
+.PHONY : src/glib_err/glib_err.c.o
 
-src/glib_str.i: src/glib_str.c.i
+src/glib_err/glib_err.i: src/glib_err/glib_err.c.i
 
-.PHONY : src/glib_str.i
+.PHONY : src/glib_err/glib_err.i
 
 # target to preprocess a source file
-src/glib_str.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_str.c.i
-.PHONY : src/glib_str.c.i
+src/glib_err/glib_err.c.i:
+	$(MAKE) -f CMakeFiles/glib_err.dir/build.make CMakeFiles/glib_err.dir/src/glib_err/glib_err.c.i
+.PHONY : src/glib_err/glib_err.c.i
 
-src/glib_str.s: src/glib_str.c.s
+src/glib_err/glib_err.s: src/glib_err/glib_err.c.s
 
-.PHONY : src/glib_str.s
+.PHONY : src/glib_err/glib_err.s
 
 # target to generate assembly for a file
-src/glib_str.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_str.c.s
-.PHONY : src/glib_str.c.s
+src/glib_err/glib_err.c.s:
+	$(MAKE) -f CMakeFiles/glib_err.dir/build.make CMakeFiles/glib_err.dir/src/glib_err/glib_err.c.s
+.PHONY : src/glib_err/glib_err.c.s
 
-src/glib_test.o: src/glib_test.c.o
+src/glib_hook/glib_hook.o: src/glib_hook/glib_hook.c.o
 
-.PHONY : src/glib_test.o
+.PHONY : src/glib_hook/glib_hook.o
 
 # target to build an object file
-src/glib_test.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test.c.o
-.PHONY : src/glib_test.c.o
+src/glib_hook/glib_hook.c.o:
+	$(MAKE) -f CMakeFiles/glib_hook.dir/build.make CMakeFiles/glib_hook.dir/src/glib_hook/glib_hook.c.o
+.PHONY : src/glib_hook/glib_hook.c.o
 
-src/glib_test.i: src/glib_test.c.i
+src/glib_hook/glib_hook.i: src/glib_hook/glib_hook.c.i
 
-.PHONY : src/glib_test.i
+.PHONY : src/glib_hook/glib_hook.i
 
 # target to preprocess a source file
-src/glib_test.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test.c.i
-.PHONY : src/glib_test.c.i
+src/glib_hook/glib_hook.c.i:
+	$(MAKE) -f CMakeFiles/glib_hook.dir/build.make CMakeFiles/glib_hook.dir/src/glib_hook/glib_hook.c.i
+.PHONY : src/glib_hook/glib_hook.c.i
 
-src/glib_test.s: src/glib_test.c.s
+src/glib_hook/glib_hook.s: src/glib_hook/glib_hook.c.s
 
-.PHONY : src/glib_test.s
+.PHONY : src/glib_hook/glib_hook.s
 
 # target to generate assembly for a file
-src/glib_test.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test.c.s
-.PHONY : src/glib_test.c.s
+src/glib_hook/glib_hook.c.s:
+	$(MAKE) -f CMakeFiles/glib_hook.dir/build.make CMakeFiles/glib_hook.dir/src/glib_hook/glib_hook.c.s
+.PHONY : src/glib_hook/glib_hook.c.s
 
-src/glib_test_tool.o: src/glib_test_tool.c.o
+src/glib_key_value/glib_key_value.o: src/glib_key_value/glib_key_value.c.o
 
-.PHONY : src/glib_test_tool.o
+.PHONY : src/glib_key_value/glib_key_value.o
 
 # target to build an object file
-src/glib_test_tool.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test_tool.c.o
-.PHONY : src/glib_test_tool.c.o
+src/glib_key_value/glib_key_value.c.o:
+	$(MAKE) -f CMakeFiles/glib_key_value.dir/build.make CMakeFiles/glib_key_value.dir/src/glib_key_value/glib_key_value.c.o
+.PHONY : src/glib_key_value/glib_key_value.c.o
 
-src/glib_test_tool.i: src/glib_test_tool.c.i
+src/glib_key_value/glib_key_value.i: src/glib_key_value/glib_key_value.c.i
 
-.PHONY : src/glib_test_tool.i
+.PHONY : src/glib_key_value/glib_key_value.i
 
 # target to preprocess a source file
-src/glib_test_tool.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test_tool.c.i
-.PHONY : src/glib_test_tool.c.i
+src/glib_key_value/glib_key_value.c.i:
+	$(MAKE) -f CMakeFiles/glib_key_value.dir/build.make CMakeFiles/glib_key_value.dir/src/glib_key_value/glib_key_value.c.i
+.PHONY : src/glib_key_value/glib_key_value.c.i
 
-src/glib_test_tool.s: src/glib_test_tool.c.s
+src/glib_key_value/glib_key_value.s: src/glib_key_value/glib_key_value.c.s
 
-.PHONY : src/glib_test_tool.s
+.PHONY : src/glib_key_value/glib_key_value.s
 
 # target to generate assembly for a file
-src/glib_test_tool.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_test_tool.c.s
-.PHONY : src/glib_test_tool.c.s
+src/glib_key_value/glib_key_value.c.s:
+	$(MAKE) -f CMakeFiles/glib_key_value.dir/build.make CMakeFiles/glib_key_value.dir/src/glib_key_value/glib_key_value.c.s
+.PHONY : src/glib_key_value/glib_key_value.c.s
 
-src/glib_timer.o: src/glib_timer.c.o
+src/glib_normal_array/glib_normal_array.o: src/glib_normal_array/glib_normal_array.c.o
 
-.PHONY : src/glib_timer.o
+.PHONY : src/glib_normal_array/glib_normal_array.o
 
 # target to build an object file
-src/glib_timer.c.o:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_timer.c.o
-.PHONY : src/glib_timer.c.o
+src/glib_normal_array/glib_normal_array.c.o:
+	$(MAKE) -f CMakeFiles/glib_normal_array.dir/build.make CMakeFiles/glib_normal_array.dir/src/glib_normal_array/glib_normal_array.c.o
+.PHONY : src/glib_normal_array/glib_normal_array.c.o
 
-src/glib_timer.i: src/glib_timer.c.i
+src/glib_normal_array/glib_normal_array.i: src/glib_normal_array/glib_normal_array.c.i
 
-.PHONY : src/glib_timer.i
+.PHONY : src/glib_normal_array/glib_normal_array.i
 
 # target to preprocess a source file
-src/glib_timer.c.i:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_timer.c.i
-.PHONY : src/glib_timer.c.i
+src/glib_normal_array/glib_normal_array.c.i:
+	$(MAKE) -f CMakeFiles/glib_normal_array.dir/build.make CMakeFiles/glib_normal_array.dir/src/glib_normal_array/glib_normal_array.c.i
+.PHONY : src/glib_normal_array/glib_normal_array.c.i
 
-src/glib_timer.s: src/glib_timer.c.s
+src/glib_normal_array/glib_normal_array.s: src/glib_normal_array/glib_normal_array.c.s
 
-.PHONY : src/glib_timer.s
+.PHONY : src/glib_normal_array/glib_normal_array.s
 
 # target to generate assembly for a file
-src/glib_timer.c.s:
-	$(MAKE) -f CMakeFiles/glib.dir/build.make CMakeFiles/glib.dir/src/glib_timer.c.s
-.PHONY : src/glib_timer.c.s
+src/glib_normal_array/glib_normal_array.c.s:
+	$(MAKE) -f CMakeFiles/glib_normal_array.dir/build.make CMakeFiles/glib_normal_array.dir/src/glib_normal_array/glib_normal_array.c.s
+.PHONY : src/glib_normal_array/glib_normal_array.c.s
+
+src/glib_ptr_array/glib_ptr_array.o: src/glib_ptr_array/glib_ptr_array.c.o
+
+.PHONY : src/glib_ptr_array/glib_ptr_array.o
+
+# target to build an object file
+src/glib_ptr_array/glib_ptr_array.c.o:
+	$(MAKE) -f CMakeFiles/glib_ptr_array.dir/build.make CMakeFiles/glib_ptr_array.dir/src/glib_ptr_array/glib_ptr_array.c.o
+.PHONY : src/glib_ptr_array/glib_ptr_array.c.o
+
+src/glib_ptr_array/glib_ptr_array.i: src/glib_ptr_array/glib_ptr_array.c.i
+
+.PHONY : src/glib_ptr_array/glib_ptr_array.i
+
+# target to preprocess a source file
+src/glib_ptr_array/glib_ptr_array.c.i:
+	$(MAKE) -f CMakeFiles/glib_ptr_array.dir/build.make CMakeFiles/glib_ptr_array.dir/src/glib_ptr_array/glib_ptr_array.c.i
+.PHONY : src/glib_ptr_array/glib_ptr_array.c.i
+
+src/glib_ptr_array/glib_ptr_array.s: src/glib_ptr_array/glib_ptr_array.c.s
+
+.PHONY : src/glib_ptr_array/glib_ptr_array.s
+
+# target to generate assembly for a file
+src/glib_ptr_array/glib_ptr_array.c.s:
+	$(MAKE) -f CMakeFiles/glib_ptr_array.dir/build.make CMakeFiles/glib_ptr_array.dir/src/glib_ptr_array/glib_ptr_array.c.s
+.PHONY : src/glib_ptr_array/glib_ptr_array.c.s
+
+src/glib_sigle_list/glib_sigle_list.o: src/glib_sigle_list/glib_sigle_list.c.o
+
+.PHONY : src/glib_sigle_list/glib_sigle_list.o
+
+# target to build an object file
+src/glib_sigle_list/glib_sigle_list.c.o:
+	$(MAKE) -f CMakeFiles/glib_sigle_list.dir/build.make CMakeFiles/glib_sigle_list.dir/src/glib_sigle_list/glib_sigle_list.c.o
+.PHONY : src/glib_sigle_list/glib_sigle_list.c.o
+
+src/glib_sigle_list/glib_sigle_list.i: src/glib_sigle_list/glib_sigle_list.c.i
+
+.PHONY : src/glib_sigle_list/glib_sigle_list.i
+
+# target to preprocess a source file
+src/glib_sigle_list/glib_sigle_list.c.i:
+	$(MAKE) -f CMakeFiles/glib_sigle_list.dir/build.make CMakeFiles/glib_sigle_list.dir/src/glib_sigle_list/glib_sigle_list.c.i
+.PHONY : src/glib_sigle_list/glib_sigle_list.c.i
+
+src/glib_sigle_list/glib_sigle_list.s: src/glib_sigle_list/glib_sigle_list.c.s
+
+.PHONY : src/glib_sigle_list/glib_sigle_list.s
+
+# target to generate assembly for a file
+src/glib_sigle_list/glib_sigle_list.c.s:
+	$(MAKE) -f CMakeFiles/glib_sigle_list.dir/build.make CMakeFiles/glib_sigle_list.dir/src/glib_sigle_list/glib_sigle_list.c.s
+.PHONY : src/glib_sigle_list/glib_sigle_list.c.s
+
+src/glib_str/glib_str.o: src/glib_str/glib_str.c.o
+
+.PHONY : src/glib_str/glib_str.o
+
+# target to build an object file
+src/glib_str/glib_str.c.o:
+	$(MAKE) -f CMakeFiles/glib_str.dir/build.make CMakeFiles/glib_str.dir/src/glib_str/glib_str.c.o
+.PHONY : src/glib_str/glib_str.c.o
+
+src/glib_str/glib_str.i: src/glib_str/glib_str.c.i
+
+.PHONY : src/glib_str/glib_str.i
+
+# target to preprocess a source file
+src/glib_str/glib_str.c.i:
+	$(MAKE) -f CMakeFiles/glib_str.dir/build.make CMakeFiles/glib_str.dir/src/glib_str/glib_str.c.i
+.PHONY : src/glib_str/glib_str.c.i
+
+src/glib_str/glib_str.s: src/glib_str/glib_str.c.s
+
+.PHONY : src/glib_str/glib_str.s
+
+# target to generate assembly for a file
+src/glib_str/glib_str.c.s:
+	$(MAKE) -f CMakeFiles/glib_str.dir/build.make CMakeFiles/glib_str.dir/src/glib_str/glib_str.c.s
+.PHONY : src/glib_str/glib_str.c.s
+
+src/glib_string/glib_string.o: src/glib_string/glib_string.c.o
+
+.PHONY : src/glib_string/glib_string.o
+
+# target to build an object file
+src/glib_string/glib_string.c.o:
+	$(MAKE) -f CMakeFiles/glib_string.dir/build.make CMakeFiles/glib_string.dir/src/glib_string/glib_string.c.o
+.PHONY : src/glib_string/glib_string.c.o
+
+src/glib_string/glib_string.i: src/glib_string/glib_string.c.i
+
+.PHONY : src/glib_string/glib_string.i
+
+# target to preprocess a source file
+src/glib_string/glib_string.c.i:
+	$(MAKE) -f CMakeFiles/glib_string.dir/build.make CMakeFiles/glib_string.dir/src/glib_string/glib_string.c.i
+.PHONY : src/glib_string/glib_string.c.i
+
+src/glib_string/glib_string.s: src/glib_string/glib_string.c.s
+
+.PHONY : src/glib_string/glib_string.s
+
+# target to generate assembly for a file
+src/glib_string/glib_string.c.s:
+	$(MAKE) -f CMakeFiles/glib_string.dir/build.make CMakeFiles/glib_string.dir/src/glib_string/glib_string.c.s
+.PHONY : src/glib_string/glib_string.c.s
+
+src/glib_test/glib_test.o: src/glib_test/glib_test.c.o
+
+.PHONY : src/glib_test/glib_test.o
+
+# target to build an object file
+src/glib_test/glib_test.c.o:
+	$(MAKE) -f CMakeFiles/glib_test.dir/build.make CMakeFiles/glib_test.dir/src/glib_test/glib_test.c.o
+.PHONY : src/glib_test/glib_test.c.o
+
+src/glib_test/glib_test.i: src/glib_test/glib_test.c.i
+
+.PHONY : src/glib_test/glib_test.i
+
+# target to preprocess a source file
+src/glib_test/glib_test.c.i:
+	$(MAKE) -f CMakeFiles/glib_test.dir/build.make CMakeFiles/glib_test.dir/src/glib_test/glib_test.c.i
+.PHONY : src/glib_test/glib_test.c.i
+
+src/glib_test/glib_test.s: src/glib_test/glib_test.c.s
+
+.PHONY : src/glib_test/glib_test.s
+
+# target to generate assembly for a file
+src/glib_test/glib_test.c.s:
+	$(MAKE) -f CMakeFiles/glib_test.dir/build.make CMakeFiles/glib_test.dir/src/glib_test/glib_test.c.s
+.PHONY : src/glib_test/glib_test.c.s
+
+src/glib_test_tool/glib_test_tool.o: src/glib_test_tool/glib_test_tool.c.o
+
+.PHONY : src/glib_test_tool/glib_test_tool.o
+
+# target to build an object file
+src/glib_test_tool/glib_test_tool.c.o:
+	$(MAKE) -f CMakeFiles/glib_test_tool.dir/build.make CMakeFiles/glib_test_tool.dir/src/glib_test_tool/glib_test_tool.c.o
+.PHONY : src/glib_test_tool/glib_test_tool.c.o
+
+src/glib_test_tool/glib_test_tool.i: src/glib_test_tool/glib_test_tool.c.i
+
+.PHONY : src/glib_test_tool/glib_test_tool.i
+
+# target to preprocess a source file
+src/glib_test_tool/glib_test_tool.c.i:
+	$(MAKE) -f CMakeFiles/glib_test_tool.dir/build.make CMakeFiles/glib_test_tool.dir/src/glib_test_tool/glib_test_tool.c.i
+.PHONY : src/glib_test_tool/glib_test_tool.c.i
+
+src/glib_test_tool/glib_test_tool.s: src/glib_test_tool/glib_test_tool.c.s
+
+.PHONY : src/glib_test_tool/glib_test_tool.s
+
+# target to generate assembly for a file
+src/glib_test_tool/glib_test_tool.c.s:
+	$(MAKE) -f CMakeFiles/glib_test_tool.dir/build.make CMakeFiles/glib_test_tool.dir/src/glib_test_tool/glib_test_tool.c.s
+.PHONY : src/glib_test_tool/glib_test_tool.c.s
+
+src/glib_timer/glib_timer.o: src/glib_timer/glib_timer.c.o
+
+.PHONY : src/glib_timer/glib_timer.o
+
+# target to build an object file
+src/glib_timer/glib_timer.c.o:
+	$(MAKE) -f CMakeFiles/glib_timer.dir/build.make CMakeFiles/glib_timer.dir/src/glib_timer/glib_timer.c.o
+.PHONY : src/glib_timer/glib_timer.c.o
+
+src/glib_timer/glib_timer.i: src/glib_timer/glib_timer.c.i
+
+.PHONY : src/glib_timer/glib_timer.i
+
+# target to preprocess a source file
+src/glib_timer/glib_timer.c.i:
+	$(MAKE) -f CMakeFiles/glib_timer.dir/build.make CMakeFiles/glib_timer.dir/src/glib_timer/glib_timer.c.i
+.PHONY : src/glib_timer/glib_timer.c.i
+
+src/glib_timer/glib_timer.s: src/glib_timer/glib_timer.c.s
+
+.PHONY : src/glib_timer/glib_timer.s
+
+# target to generate assembly for a file
+src/glib_timer/glib_timer.c.s:
+	$(MAKE) -f CMakeFiles/glib_timer.dir/build.make CMakeFiles/glib_timer.dir/src/glib_timer/glib_timer.c.s
+.PHONY : src/glib_timer/glib_timer.c.s
 
 # Help Target
 help:
@@ -426,42 +596,56 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... glib"
+	@echo "... glib_timer"
 	@echo "... edit_cache"
-	@echo "... src/glib_byte_array.o"
-	@echo "... src/glib_byte_array.i"
-	@echo "... src/glib_byte_array.s"
-	@echo "... src/glib_err.o"
-	@echo "... src/glib_err.i"
-	@echo "... src/glib_err.s"
-	@echo "... src/glib_hook.o"
-	@echo "... src/glib_hook.i"
-	@echo "... src/glib_hook.s"
-	@echo "... src/glib_key_value.o"
-	@echo "... src/glib_key_value.i"
-	@echo "... src/glib_key_value.s"
-	@echo "... src/glib_normal_array.o"
-	@echo "... src/glib_normal_array.i"
-	@echo "... src/glib_normal_array.s"
-	@echo "... src/glib_ptr_array.o"
-	@echo "... src/glib_ptr_array.i"
-	@echo "... src/glib_ptr_array.s"
-	@echo "... src/glib_sigle_list.o"
-	@echo "... src/glib_sigle_list.i"
-	@echo "... src/glib_sigle_list.s"
-	@echo "... src/glib_str.o"
-	@echo "... src/glib_str.i"
-	@echo "... src/glib_str.s"
-	@echo "... src/glib_test.o"
-	@echo "... src/glib_test.i"
-	@echo "... src/glib_test.s"
-	@echo "... src/glib_test_tool.o"
-	@echo "... src/glib_test_tool.i"
-	@echo "... src/glib_test_tool.s"
-	@echo "... src/glib_timer.o"
-	@echo "... src/glib_timer.i"
-	@echo "... src/glib_timer.s"
+	@echo "... glib_test_tool"
+	@echo "... glib_string"
+	@echo "... glib_sigle_list"
+	@echo "... glib_str"
+	@echo "... glib_err"
+	@echo "... glib_test"
+	@echo "... glib_byte_array"
+	@echo "... rebuild_cache"
+	@echo "... glib_ptr_array"
+	@echo "... glib_key_value"
+	@echo "... glib_hook"
+	@echo "... glib_normal_array"
+	@echo "... src/glib_byte_array/glib_byte_array.o"
+	@echo "... src/glib_byte_array/glib_byte_array.i"
+	@echo "... src/glib_byte_array/glib_byte_array.s"
+	@echo "... src/glib_err/glib_err.o"
+	@echo "... src/glib_err/glib_err.i"
+	@echo "... src/glib_err/glib_err.s"
+	@echo "... src/glib_hook/glib_hook.o"
+	@echo "... src/glib_hook/glib_hook.i"
+	@echo "... src/glib_hook/glib_hook.s"
+	@echo "... src/glib_key_value/glib_key_value.o"
+	@echo "... src/glib_key_value/glib_key_value.i"
+	@echo "... src/glib_key_value/glib_key_value.s"
+	@echo "... src/glib_normal_array/glib_normal_array.o"
+	@echo "... src/glib_normal_array/glib_normal_array.i"
+	@echo "... src/glib_normal_array/glib_normal_array.s"
+	@echo "... src/glib_ptr_array/glib_ptr_array.o"
+	@echo "... src/glib_ptr_array/glib_ptr_array.i"
+	@echo "... src/glib_ptr_array/glib_ptr_array.s"
+	@echo "... src/glib_sigle_list/glib_sigle_list.o"
+	@echo "... src/glib_sigle_list/glib_sigle_list.i"
+	@echo "... src/glib_sigle_list/glib_sigle_list.s"
+	@echo "... src/glib_str/glib_str.o"
+	@echo "... src/glib_str/glib_str.i"
+	@echo "... src/glib_str/glib_str.s"
+	@echo "... src/glib_string/glib_string.o"
+	@echo "... src/glib_string/glib_string.i"
+	@echo "... src/glib_string/glib_string.s"
+	@echo "... src/glib_test/glib_test.o"
+	@echo "... src/glib_test/glib_test.i"
+	@echo "... src/glib_test/glib_test.s"
+	@echo "... src/glib_test_tool/glib_test_tool.o"
+	@echo "... src/glib_test_tool/glib_test_tool.i"
+	@echo "... src/glib_test_tool/glib_test_tool.s"
+	@echo "... src/glib_timer/glib_timer.o"
+	@echo "... src/glib_timer/glib_timer.i"
+	@echo "... src/glib_timer/glib_timer.s"
 .PHONY : help
 
 
