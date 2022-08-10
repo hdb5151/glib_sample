@@ -1,6 +1,8 @@
+/home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib_thread_pools.dir
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib_timer.dir
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/edit_cache.dir
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib_test_tool.dir
+/home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib_thread.dir
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib_string.dir
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib_sigle_list.dir
 /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug/CMakeFiles/glib_str.dir

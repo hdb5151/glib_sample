@@ -45,8 +45,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/glib_thread_pools.dir/DependInfo.cmake"
   "CMakeFiles/glib_timer.dir/DependInfo.cmake"
   "CMakeFiles/glib_test_tool.dir/DependInfo.cmake"
+  "CMakeFiles/glib_thread.dir/DependInfo.cmake"
   "CMakeFiles/glib_string.dir/DependInfo.cmake"
   "CMakeFiles/glib_sigle_list.dir/DependInfo.cmake"
   "CMakeFiles/glib_str.dir/DependInfo.cmake"

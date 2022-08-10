@@ -29,6 +29,8 @@ set(PROJECT_NAME
     glib_test
     glib_test_tool
     glib_timer
+    glib_thread
+    glib_thread_pools
 )
 
 set(CUDA_DIRS /usr/local/cuda)
