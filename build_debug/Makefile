@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/hdb/proj/DEEP-GSTREAMER/glib_sample/build_debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,160 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named glib_thread_pools
+# Target rules for targets named glib_normal_array
 
 # Build rule for target.
-glib_thread_pools: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_thread_pools
-.PHONY : glib_thread_pools
+glib_normal_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_normal_array
+.PHONY : glib_normal_array
 
 # fast build rule for target.
-glib_thread_pools/fast:
-	$(MAKE) -f CMakeFiles/glib_thread_pools.dir/build.make CMakeFiles/glib_thread_pools.dir/build
-.PHONY : glib_thread_pools/fast
-
-#=============================================================================
-# Target rules for targets named glib_timer
-
-# Build rule for target.
-glib_timer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_timer
-.PHONY : glib_timer
-
-# fast build rule for target.
-glib_timer/fast:
-	$(MAKE) -f CMakeFiles/glib_timer.dir/build.make CMakeFiles/glib_timer.dir/build
-.PHONY : glib_timer/fast
-
-#=============================================================================
-# Target rules for targets named glib_test_tool
-
-# Build rule for target.
-glib_test_tool: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_test_tool
-.PHONY : glib_test_tool
-
-# fast build rule for target.
-glib_test_tool/fast:
-	$(MAKE) -f CMakeFiles/glib_test_tool.dir/build.make CMakeFiles/glib_test_tool.dir/build
-.PHONY : glib_test_tool/fast
-
-#=============================================================================
-# Target rules for targets named glib_thread
-
-# Build rule for target.
-glib_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_thread
-.PHONY : glib_thread
-
-# fast build rule for target.
-glib_thread/fast:
-	$(MAKE) -f CMakeFiles/glib_thread.dir/build.make CMakeFiles/glib_thread.dir/build
-.PHONY : glib_thread/fast
-
-#=============================================================================
-# Target rules for targets named glib_string
-
-# Build rule for target.
-glib_string: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_string
-.PHONY : glib_string
-
-# fast build rule for target.
-glib_string/fast:
-	$(MAKE) -f CMakeFiles/glib_string.dir/build.make CMakeFiles/glib_string.dir/build
-.PHONY : glib_string/fast
-
-#=============================================================================
-# Target rules for targets named glib_sigle_list
-
-# Build rule for target.
-glib_sigle_list: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_sigle_list
-.PHONY : glib_sigle_list
-
-# fast build rule for target.
-glib_sigle_list/fast:
-	$(MAKE) -f CMakeFiles/glib_sigle_list.dir/build.make CMakeFiles/glib_sigle_list.dir/build
-.PHONY : glib_sigle_list/fast
-
-#=============================================================================
-# Target rules for targets named glib_str
-
-# Build rule for target.
-glib_str: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_str
-.PHONY : glib_str
-
-# fast build rule for target.
-glib_str/fast:
-	$(MAKE) -f CMakeFiles/glib_str.dir/build.make CMakeFiles/glib_str.dir/build
-.PHONY : glib_str/fast
-
-#=============================================================================
-# Target rules for targets named glib_err
-
-# Build rule for target.
-glib_err: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_err
-.PHONY : glib_err
-
-# fast build rule for target.
-glib_err/fast:
-	$(MAKE) -f CMakeFiles/glib_err.dir/build.make CMakeFiles/glib_err.dir/build
-.PHONY : glib_err/fast
-
-#=============================================================================
-# Target rules for targets named glib_test
-
-# Build rule for target.
-glib_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_test
-.PHONY : glib_test
-
-# fast build rule for target.
-glib_test/fast:
-	$(MAKE) -f CMakeFiles/glib_test.dir/build.make CMakeFiles/glib_test.dir/build
-.PHONY : glib_test/fast
-
-#=============================================================================
-# Target rules for targets named glib_byte_array
-
-# Build rule for target.
-glib_byte_array: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_byte_array
-.PHONY : glib_byte_array
-
-# fast build rule for target.
-glib_byte_array/fast:
-	$(MAKE) -f CMakeFiles/glib_byte_array.dir/build.make CMakeFiles/glib_byte_array.dir/build
-.PHONY : glib_byte_array/fast
-
-#=============================================================================
-# Target rules for targets named glib_ptr_array
-
-# Build rule for target.
-glib_ptr_array: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_ptr_array
-.PHONY : glib_ptr_array
-
-# fast build rule for target.
-glib_ptr_array/fast:
-	$(MAKE) -f CMakeFiles/glib_ptr_array.dir/build.make CMakeFiles/glib_ptr_array.dir/build
-.PHONY : glib_ptr_array/fast
-
-#=============================================================================
-# Target rules for targets named glib_key_value
-
-# Build rule for target.
-glib_key_value: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_key_value
-.PHONY : glib_key_value
-
-# fast build rule for target.
-glib_key_value/fast:
-	$(MAKE) -f CMakeFiles/glib_key_value.dir/build.make CMakeFiles/glib_key_value.dir/build
-.PHONY : glib_key_value/fast
+glib_normal_array/fast:
+	$(MAKE) -f CMakeFiles/glib_normal_array.dir/build.make CMakeFiles/glib_normal_array.dir/build
+.PHONY : glib_normal_array/fast
 
 #=============================================================================
 # Target rules for targets named glib_hook
@@ -280,17 +137,173 @@ glib_hook/fast:
 .PHONY : glib_hook/fast
 
 #=============================================================================
-# Target rules for targets named glib_normal_array
+# Target rules for targets named glib_key_value
 
 # Build rule for target.
-glib_normal_array: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 glib_normal_array
-.PHONY : glib_normal_array
+glib_key_value: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_key_value
+.PHONY : glib_key_value
 
 # fast build rule for target.
-glib_normal_array/fast:
-	$(MAKE) -f CMakeFiles/glib_normal_array.dir/build.make CMakeFiles/glib_normal_array.dir/build
-.PHONY : glib_normal_array/fast
+glib_key_value/fast:
+	$(MAKE) -f CMakeFiles/glib_key_value.dir/build.make CMakeFiles/glib_key_value.dir/build
+.PHONY : glib_key_value/fast
+
+#=============================================================================
+# Target rules for targets named glib_ptr_array
+
+# Build rule for target.
+glib_ptr_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_ptr_array
+.PHONY : glib_ptr_array
+
+# fast build rule for target.
+glib_ptr_array/fast:
+	$(MAKE) -f CMakeFiles/glib_ptr_array.dir/build.make CMakeFiles/glib_ptr_array.dir/build
+.PHONY : glib_ptr_array/fast
+
+#=============================================================================
+# Target rules for targets named glib_byte_array
+
+# Build rule for target.
+glib_byte_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_byte_array
+.PHONY : glib_byte_array
+
+# fast build rule for target.
+glib_byte_array/fast:
+	$(MAKE) -f CMakeFiles/glib_byte_array.dir/build.make CMakeFiles/glib_byte_array.dir/build
+.PHONY : glib_byte_array/fast
+
+#=============================================================================
+# Target rules for targets named glib_test
+
+# Build rule for target.
+glib_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_test
+.PHONY : glib_test
+
+# fast build rule for target.
+glib_test/fast:
+	$(MAKE) -f CMakeFiles/glib_test.dir/build.make CMakeFiles/glib_test.dir/build
+.PHONY : glib_test/fast
+
+#=============================================================================
+# Target rules for targets named glib_err
+
+# Build rule for target.
+glib_err: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_err
+.PHONY : glib_err
+
+# fast build rule for target.
+glib_err/fast:
+	$(MAKE) -f CMakeFiles/glib_err.dir/build.make CMakeFiles/glib_err.dir/build
+.PHONY : glib_err/fast
+
+#=============================================================================
+# Target rules for targets named glib_str
+
+# Build rule for target.
+glib_str: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_str
+.PHONY : glib_str
+
+# fast build rule for target.
+glib_str/fast:
+	$(MAKE) -f CMakeFiles/glib_str.dir/build.make CMakeFiles/glib_str.dir/build
+.PHONY : glib_str/fast
+
+#=============================================================================
+# Target rules for targets named glib_sigle_list
+
+# Build rule for target.
+glib_sigle_list: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_sigle_list
+.PHONY : glib_sigle_list
+
+# fast build rule for target.
+glib_sigle_list/fast:
+	$(MAKE) -f CMakeFiles/glib_sigle_list.dir/build.make CMakeFiles/glib_sigle_list.dir/build
+.PHONY : glib_sigle_list/fast
+
+#=============================================================================
+# Target rules for targets named glib_string
+
+# Build rule for target.
+glib_string: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_string
+.PHONY : glib_string
+
+# fast build rule for target.
+glib_string/fast:
+	$(MAKE) -f CMakeFiles/glib_string.dir/build.make CMakeFiles/glib_string.dir/build
+.PHONY : glib_string/fast
+
+#=============================================================================
+# Target rules for targets named glib_thread
+
+# Build rule for target.
+glib_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_thread
+.PHONY : glib_thread
+
+# fast build rule for target.
+glib_thread/fast:
+	$(MAKE) -f CMakeFiles/glib_thread.dir/build.make CMakeFiles/glib_thread.dir/build
+.PHONY : glib_thread/fast
+
+#=============================================================================
+# Target rules for targets named glib_test_tool
+
+# Build rule for target.
+glib_test_tool: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_test_tool
+.PHONY : glib_test_tool
+
+# fast build rule for target.
+glib_test_tool/fast:
+	$(MAKE) -f CMakeFiles/glib_test_tool.dir/build.make CMakeFiles/glib_test_tool.dir/build
+.PHONY : glib_test_tool/fast
+
+#=============================================================================
+# Target rules for targets named glib_timer
+
+# Build rule for target.
+glib_timer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_timer
+.PHONY : glib_timer
+
+# fast build rule for target.
+glib_timer/fast:
+	$(MAKE) -f CMakeFiles/glib_timer.dir/build.make CMakeFiles/glib_timer.dir/build
+.PHONY : glib_timer/fast
+
+#=============================================================================
+# Target rules for targets named glib_thread_pools
+
+# Build rule for target.
+glib_thread_pools: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_thread_pools
+.PHONY : glib_thread_pools
+
+# fast build rule for target.
+glib_thread_pools/fast:
+	$(MAKE) -f CMakeFiles/glib_thread_pools.dir/build.make CMakeFiles/glib_thread_pools.dir/build
+.PHONY : glib_thread_pools/fast
+
+#=============================================================================
+# Target rules for targets named glib_thread_asyn_queues
+
+# Build rule for target.
+glib_thread_asyn_queues: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 glib_thread_asyn_queues
+.PHONY : glib_thread_asyn_queues
+
+# fast build rule for target.
+glib_thread_asyn_queues/fast:
+	$(MAKE) -f CMakeFiles/glib_thread_asyn_queues.dir/build.make CMakeFiles/glib_thread_asyn_queues.dir/build
+.PHONY : glib_thread_asyn_queues/fast
 
 src/glib_byte_array/glib_byte_array.o: src/glib_byte_array/glib_byte_array.c.o
 
@@ -616,6 +629,33 @@ src/glib_thread/glib_thread.c.s:
 	$(MAKE) -f CMakeFiles/glib_thread.dir/build.make CMakeFiles/glib_thread.dir/src/glib_thread/glib_thread.c.s
 .PHONY : src/glib_thread/glib_thread.c.s
 
+src/glib_thread_asyn_queues/glib_thread_asyn_queues.o: src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.o
+
+.PHONY : src/glib_thread_asyn_queues/glib_thread_asyn_queues.o
+
+# target to build an object file
+src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.o:
+	$(MAKE) -f CMakeFiles/glib_thread_asyn_queues.dir/build.make CMakeFiles/glib_thread_asyn_queues.dir/src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.o
+.PHONY : src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.o
+
+src/glib_thread_asyn_queues/glib_thread_asyn_queues.i: src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.i
+
+.PHONY : src/glib_thread_asyn_queues/glib_thread_asyn_queues.i
+
+# target to preprocess a source file
+src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.i:
+	$(MAKE) -f CMakeFiles/glib_thread_asyn_queues.dir/build.make CMakeFiles/glib_thread_asyn_queues.dir/src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.i
+.PHONY : src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.i
+
+src/glib_thread_asyn_queues/glib_thread_asyn_queues.s: src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.s
+
+.PHONY : src/glib_thread_asyn_queues/glib_thread_asyn_queues.s
+
+# target to generate assembly for a file
+src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.s:
+	$(MAKE) -f CMakeFiles/glib_thread_asyn_queues.dir/build.make CMakeFiles/glib_thread_asyn_queues.dir/src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.s
+.PHONY : src/glib_thread_asyn_queues/glib_thread_asyn_queues.c.s
+
 src/glib_thread_pools/glib_thread_pools.o: src/glib_thread_pools/glib_thread_pools.c.o
 
 .PHONY : src/glib_thread_pools/glib_thread_pools.o
@@ -676,22 +716,23 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... glib_thread_pools"
-	@echo "... glib_timer"
-	@echo "... edit_cache"
-	@echo "... glib_test_tool"
-	@echo "... glib_thread"
-	@echo "... glib_string"
-	@echo "... glib_sigle_list"
-	@echo "... glib_str"
-	@echo "... glib_err"
-	@echo "... glib_test"
-	@echo "... glib_byte_array"
 	@echo "... rebuild_cache"
-	@echo "... glib_ptr_array"
-	@echo "... glib_key_value"
-	@echo "... glib_hook"
 	@echo "... glib_normal_array"
+	@echo "... glib_hook"
+	@echo "... glib_key_value"
+	@echo "... glib_ptr_array"
+	@echo "... glib_byte_array"
+	@echo "... glib_test"
+	@echo "... glib_err"
+	@echo "... glib_str"
+	@echo "... glib_sigle_list"
+	@echo "... glib_string"
+	@echo "... glib_thread"
+	@echo "... glib_test_tool"
+	@echo "... edit_cache"
+	@echo "... glib_timer"
+	@echo "... glib_thread_pools"
+	@echo "... glib_thread_asyn_queues"
 	@echo "... src/glib_byte_array/glib_byte_array.o"
 	@echo "... src/glib_byte_array/glib_byte_array.i"
 	@echo "... src/glib_byte_array/glib_byte_array.s"
@@ -728,6 +769,9 @@ help:
 	@echo "... src/glib_thread/glib_thread.o"
 	@echo "... src/glib_thread/glib_thread.i"
 	@echo "... src/glib_thread/glib_thread.s"
+	@echo "... src/glib_thread_asyn_queues/glib_thread_asyn_queues.o"
+	@echo "... src/glib_thread_asyn_queues/glib_thread_asyn_queues.i"
+	@echo "... src/glib_thread_asyn_queues/glib_thread_asyn_queues.s"
 	@echo "... src/glib_thread_pools/glib_thread_pools.o"
 	@echo "... src/glib_thread_pools/glib_thread_pools.i"
 	@echo "... src/glib_thread_pools/glib_thread_pools.s"

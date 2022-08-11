@@ -31,6 +31,7 @@ set(PROJECT_NAME
     glib_timer
     glib_thread
     glib_thread_pools
+    glib_thread_asyn_queues
 )
 
 set(CUDA_DIRS /usr/local/cuda)

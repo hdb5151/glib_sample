@@ -74,10 +74,33 @@
  *          -->   将项目推入队列。 项目不能为NULL。 与g_async_queue_push_unlocked（）相比，此函数将新项目推到队列中已有的项目之前，这样它将成为下一个从队列中弹出的项目。
  *                这个函数必须在持有队列锁的时候被调用。
  *    void         g_async_queue_push_front_unlocked  (GAsyncQueue      *queue,
-                                                 gpointer          item);
+                                                      gpointer          item);
+ *
+ *          -->   从队列中删除一个项目。这个函数必须在持有队列锁的时候被调用。
+ *    gboolean     g_async_queue_remove_unlocked      (GAsyncQueue      *queue,
+                                                      gpointer          item);
+ *
+ *          -->   从队列中弹出数据。 如果队列为空，则此功能会阻塞，直到数据可用。这个函数必须在持有队列锁的时候被调用。
+ *    gpointer     g_async_queue_pop_unlocked         (GAsyncQueue      *queue);
+ *
+ *          -->   试图从队列中弹出数据。 如果没有数据可用，则返回NULL。这个函数必须在持有队列锁的时候被调用。
+ *    gpointer     g_async_queue_try_pop_unlocked     (GAsyncQueue      *queue);
+ *
+ *          -->   返回队列的长度。实际上这个函数返回队列中数据项的数量减去等待线程的数量，所以负值表示等待线程，正值表示队列中可用的项。
+ *                返回值0可以表示队列中的n个条目和n个等待的线程。 这可能是由于队列锁定或调度造成的。
+ *    gint         g_async_queue_length_unlocked      (GAsyncQueue      *queue);
  *
  *
+ *          -->   使用func对队列进行排序。
+ *                sort函数func传递队列的两个元素。 如果它们相等，它应该返回0，如果第一个元素应该在队列中更高，则返回负值;
+ *                如果队列中第一个元素应该比第二个元素低，则返回正值。
+ *    void         g_async_queue_sort_unlocked        (GAsyncQueue      *queue,
+                                                      GCompareDataFunc  func,
+                                                      gpointer          user_data);
  *
+ *
+ *    gpointer     g_async_queue_timed_pop            (GAsyncQueue      *queue,
+                                                      GTimeVal         *end_time);
  *
  *
  *
