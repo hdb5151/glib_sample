@@ -84,7 +84,31 @@
  */
 
 gint data[10];
+typedef gint (*thread_func)(gpointer data);
+struct thread_func_data {
+    thread_func func;
+    gpointer data;
+};
+
+struct add_data {
+    gint a;
+    gint b;
+};
+struct square_data {
+    gint a;
+};
+struct mix_data {
+    gint a;
+    gint b;
+    gint c;
+};
+
 gint compare_data(gconstpointer a, gconstpointer b, gpointer user_data);
 void thread_execute(gpointer data, gpointer user_data);
+
+gint add_func(gpointer data);
+gint square_func(gpointer data);
+gint mix_func(gpointer data);
+void thread_execute_2(gpointer data, gpointer user_data);
 
 #endif
